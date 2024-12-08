@@ -27,13 +27,13 @@ const Miss = () => {
       </div>
 
       <main
-        className='mt-9  '
+        className='mt-9  md:h-[700px] h-[300px] w-auto'
         style={{
           backgroundImage: 'url(/m1.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '700px',
-          width: '100%',
+          // height: '700px',
+          // width: '100%',
         }}
       >
         
