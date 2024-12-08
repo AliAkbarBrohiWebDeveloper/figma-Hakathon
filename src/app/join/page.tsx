@@ -15,17 +15,17 @@ const Joinpage = () => {
 
 <form action="" className="mt-16">
 
-<input type="email"  placeholder="Email address" required className="border-b-2 border-2 w-96 mt-9"/>
+<input type="email"  placeholder="Email address" required className="border-b-2 border-2 w-96 mt-9 h-12 rounded-sm"/>
 <br />
-<input type="password"  placeholder="Password" required className="border-2 w-96 mt-3"/>
+<input type="password"  placeholder="Password" required className="border-2 w-96 mt-3 h-12 rounded-sm"/>
 
 <br />
-<input type="email"  placeholder="First Name" required className="border-b-2 border-2 w-96 mt-9"/>
+<input type="email"  placeholder="First Name" required className="border-b-2 border-2 w-96 mt-9 h-12 rounded-sm"/>
 <br />
-<input type="password"  placeholder="Last Name" required className="border-2 w-96 mt-9"/>
+<input type="password"  placeholder="Last Name" required className="border-2 w-96 mt-9 h-12 rounded-sm"/>
 
 <br />
-<input type="password"  placeholder="Date of Birth" required className="border-2 w-96 mt-9"/>
+<input type="password"  placeholder="Date of Birth" required className="border-2 w-96 mt-9 h-12 rounded-sm"/>
 
 <br />
 
@@ -44,7 +44,7 @@ const Joinpage = () => {
 <br />
 <p>Sign up for emails to get updates from Nike on products, offers and your Member benefits</p>
 <h3 className='mt-9'>By creating an account, you agree to Nikes Privacy Policy and Terms of Use.</h3>
-<button className="mt-5 px-28 py-2 bg-black text-white font-bold">Join Us</button>
+<button className="mt-5 px-28 py-2 bg-black text-white font-bold hover:scale-105 duration-300 rounded-sm">Join Us</button>
 
 
 <p className="mt-3">Already a Member?

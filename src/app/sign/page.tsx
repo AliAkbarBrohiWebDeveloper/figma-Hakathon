@@ -15,9 +15,9 @@ const SignIpage = () => {
 
 <form action="" className="mt-16">
 
-<input type="email"  placeholder="Email address" required className="border-b-2 border-2 w-auto mt-3"/>
+<input type="email"  placeholder="Email address" required className="border-b-2 border-2  mt-3 rounded-sm h-12 w-96"/>
 <br />
-<input type="password"  placeholder="Password" required className="border-2 w-auto mt-6"/>
+<input type="password"  placeholder="Password" required className="border-2 mt-6 rounded-sm h-12 w-96"/>
 <br />
 <div className='flex justify-center items-center gap-x-6 mt-9'>
 
@@ -40,7 +40,7 @@ const SignIpage = () => {
 <span>Forgotten your password?</span>
 </div>
 <br />
-<button className="mt-5 px-28 py-2 bg-black text-white font-bold">sign In</button>
+<button className="mt-5 px-28 py-2 bg-black text-white font-bold rounded-sm hover:scale-105 duration-300">sign In</button>
 
 <p className="mt-3">Not A Member
 

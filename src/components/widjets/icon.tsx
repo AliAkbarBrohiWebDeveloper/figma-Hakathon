@@ -10,9 +10,9 @@ const Icon = () => {
 
     <li className='text-xl font-bold'>Icons</li>
     <li className='mt-6'> Air Force 1</li>
-    <li>Huarache</li>
-    <li>Air Max 90</li>
-    <li>Air Max 95</li>
+    <li className='mt-3'>Huarache</li>
+    <li className='mt-3'>Air Max 90</li>
+    <li className='mt-3'>Air Max 95</li>
 </ul>
     
 </div>
@@ -23,9 +23,9 @@ const Icon = () => {
 
     <li className='text-xl font-bold'>Shoes</li>
     <li className='mt-6'> All Shoes</li>
-    <li>Custom Shoes</li>
-    <li>Jordan Shoes</li>
-    <li>Running Shoes</li>
+    <li className='mt-3'>Custom Shoes</li>
+    <li className='mt-3'>Jordan Shoes</li>
+    <li className='mt-3'>Running Shoes</li>
 </ul>
     </div>
 
@@ -35,9 +35,9 @@ const Icon = () => {
 
     <li className='text-xl font-bold'>Clothing</li>
     <li className='mt-6'> All Clothing</li>
-    <li>Modest Wear</li>
-    <li>Hoodies & Pullovers</li>
-    <li>Shirts & Tops</li>
+    <li className=' mt-3'>Modest Wear</li>
+    <li className='mt-3'>Hoodies & Pullovers</li>
+    <li className='mt-3'>Shirts & Tops</li>
 </ul>
     </div>
     
@@ -47,9 +47,9 @@ const Icon = () => {
 
     <li className='text-xl font-bold'>Kids</li>
     <li className='mt-6'> Infant & Toddler Shoes</li>
-    <li>Kids Shoes</li>
-    <li>Kids Jordan Shoes</li>
-    <li>Kids Basketball Shoes</li>
+    <li className='mt-3'>Kids Shoes</li>
+    <li className='mt-3'>Kids Jordan Shoes</li>
+    <li className='mt-3'>Kids Basketball Shoes</li>
 </ul>
     </div>
 

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Wrapper from '../shareable/Wrapper';
+import Button from '../shareable/Button';
 
 const GearUpImages = [
   {
@@ -53,10 +54,10 @@ const Feature = () => {
       <div className='text-center mt-3'>
         <h3 className='text-2xl font-bold'>STEP INTO WHAT FEELS GOOD</h3>
         <p>Cause everyone should know the feeling of running in that perfect pair.</p>
-        <button className='bg-black text-white px-6 py-2 rounded-lg mt-3'>Find Your Shoe</button>
+        <Button text='Find Your Shoe'/>
       </div>
 
-      <div className='text-center mt-6'>
+      <div className=' mt-6'>
         <h3 className='text-xl font-bold'>Gear Up</h3>
       </div>
 

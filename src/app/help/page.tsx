@@ -1,5 +1,6 @@
 
 
+import Button from '@/components/shareable/Button'
 import Image from 'next/image'
 import React from 'react'
 import { BiSearch } from 'react-icons/bi'
@@ -39,8 +40,9 @@ const Helppage = () => {
           <h6 className='mt-4'>Nike Members can store multiple debit or credit cards in their profile for faster checkout. If you are not already a Member, join us today.</h6>
 
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
-            <button className='bg-black px-6 py-2 rounded-lg text-white w-full sm:w-auto'>JOIN US</button>
-            <button className='bg-black px-6 py-2 rounded-lg text-white w-full sm:w-auto'>SHOP NIKE</button>
+          <Button text='JOIN US'/>
+          <Button text='SHOP NIKE'/>
+            
           </div>
 
           
@@ -78,26 +80,26 @@ const Helppage = () => {
         
           <div className='flex flex-col justify-center gap-8 mt-6 gap-y-6'>
             <div className='text-centern '>
-              <Image src='/phone1.png' alt='Phone Icon' height={64} width={64} className='md:mx-16 mx-28'/>
+              <Image src='/phone1.png' alt='Phone Icon' height={64} width={64} className='md:mx-16 ml-48'/>
               <h3 className='font-semibold'>000 800 919 0566</h3>
               <h5>Products & Orders: 24 hours a day, 7 days a week</h5>
               <p>Company Info & Enquiries: 07:30 - 16:30, Monday - Friday</p>
             </div>
 
             <div className='text-center'>
-              <Image src='/cam1.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 mx-28'/>
+              <Image src='/cam1.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 ml-48'/>
               <h3 className='font-semibold'>24 hours a day</h3>
               <p>7 days a week</p>
             </div>
 
             <div className='text-center'>
-              <Image src='/cam3.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 mx-28'/>
+              <Image src='/cam3.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 ml-48'/>
               <h3 className='font-semibold'>We will reply within</h3>
               <p>five business days</p>
             </div>
 
             <div className='text-center'>
-              <Image src='/cam2.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 mx-28'/>
+              <Image src='/cam2.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 ml-48'/>
               <h3 className='font-semibold'>STORE LOCATOR</h3>
               <p>Find Nike retail stores near you</p>
             </div>

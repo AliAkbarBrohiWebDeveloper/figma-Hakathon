@@ -6,7 +6,7 @@ import Wrapper from '../shareable/Wrapper'
 const Headertop = () => {
   return (
     <Wrapper>
-    <header className='flex justify-end items-center gap-x-6 font-sm'>
+    <header className='flex justify-end items-center gap-x-6 font-semibold'>
 
 <div >
 

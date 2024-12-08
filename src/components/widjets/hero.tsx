@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Wrapper from '../shareable/Wrapper';
+import Button from "@/components/shareable/Button"
 
 const AirMax = [
   {
@@ -26,7 +27,7 @@ const AirMax = [
 const Hero = () => {
   return (
     <Wrapper>
-    <section className='mt-20'>
+    <section className='mt-10'>
 
       <div className='text-center'>
 
@@ -45,20 +46,23 @@ const Hero = () => {
       >
       </main>
 
-      <div className='mt-9'>
-        <div className='text-center'>
-          <p>First Look</p>
-          <h2 className='text-2xl font-bold'>Nike Air Max Pulse</h2>
-          <p>Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse — designed to push you past your limits and help you go to the max.</p>
-        </div>
-        <div className='flex justify-center items-center gap-x-4 mt-6'>
-          <button className='bg-black text-white px-6 py-2 rounded-lg'>Notify Me</button>
-          <button className='bg-black text-white px-6 py-2 rounded-lg'>Shop Air Max</button>
-        </div>
+      <div className='text-center'>
+
+<h4>First Look</h4>
+<h3 className='text-5xl font-semibold'>Nike Air Max Pulse</h3>
+<p className='mt-4'>Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse
+—designed to push you past your limits and help you go to the max.</p>
+<div className='flex justify-center items-center gap-x-9'>
+<Button text='Notify Me'/>
+<Button text='Shop Air Max'/>
+</div>
+
+
+
       </div>
 
       
-      <div className='flex justify-center gap-4 mt-12 flex-col sm:flex-row'>
+      <div className='flex justify-center gap-4 mt-28 flex-col sm:flex-row'>
         {
           AirMax.map((item) => {
             return (

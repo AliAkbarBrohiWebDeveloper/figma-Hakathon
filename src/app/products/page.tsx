@@ -1,3 +1,4 @@
+import Button2 from '@/components/shareable/Button2'
 import Wrapper from '@/components/shareable/Wrapper'
 import Image from 'next/image'
 import React from 'react'
@@ -126,7 +127,7 @@ const productImages = [
 
 
     }, {
-        id: 133,
+        id: 13,
         src: "/p13.png",
         span: "just In",
         header: "Nike Air Force 1 LV8 3",
@@ -527,52 +528,52 @@ const productImages = [
         id: 50,
         src: "/p50.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike Alpha",
 
         any: "Men's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 3 695.00"
 
 
     },
     {
         id: 51,
         src: "/p51.png",
-        span: "just In",
-        header: "NikeCourt Victory",
+        span: "Promo Exclusion",
+        header: "Air Jordan 1 Mid SE",
 
         any: "Men's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 12 295.00"
 
 
     },{
         id: 52,
         src: "/p52.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike Air Max 270 GO",
 
-        any: "Men's Shoes",
+        any: "Baby/Toddler Easy On/Off Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 6 995.00"
 
 
     },{
         id: 53,
         src: "/p53.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike Invincible 3 By You",
 
-        any: "Men's Shoes",
-        color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        any: "Custom Men's Road Running Shoes",
+        color: "6 Colours",
+        price: "MRP : ₹ 19 295.00"
 
 
     },{
         id: 54,
         src: "/p54.png",
-        span: "just In",
-        header: "NikeCourt Victory",
+        span: "Sustainable Materials",
+        header: "Nike Air Max TW SE",
 
         any: "Men's Shoes",
         color: "1 Colour",
@@ -583,77 +584,77 @@ const productImages = [
         id: 55,
         src: "/p55.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike Invincible 3 By You",
 
-        any: "Men's Shoes",
-        color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        any: "Custom Women's Road Running Shoes",
+        color: "6 Colours",
+        price: "MRP : ₹ 19 295.00"
 
 
     },{
         id: 56,
         src: "/p56.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike Air Max 90 Futura By You",
 
-        any: "Men's Shoes",
-        color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        any: "Custom Women's Shoes",
+        color: "6 Colours",
+        price: "MRP : ₹ 17 295.00"
 
 
     },{
         id: 57,
         src: "/p57.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "MRP : ₹ 17 295.00",
 
-        any: "Men's Shoes",
-        color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        any: "Custom Men's Road Running Shoes",
+        color: "5 Colours",
+        price: "MRP : ₹ 16 995.00"
 
 
     },{
         id: 58,
         src: "/p58.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike Air Max 90 SE",
 
         any: "Men's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 12 795.00"
 
 
     },{
         id: 59,
         src: "/p60.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike Blazer Mid '77 Unlocked By You",
 
-        any: "Men's Shoes",
-        color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        any: "Custom Men's Shoes",
+        color: "9 Colours",
+        price: "MRP : ₹ 13 295.00"
 
 
     },{
         id: 61,
         src: "/p61.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike React Infinity 3 By You",
 
-        any: "Men's Shoes",
+        any: "Custom Men's Road Running Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 16 995.00"
 
 
     },{
         id: 62,
         src: "/p62.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike Blazer Mid '77 Unlocked By You",
 
-        any: "Men's Shoes",
-        color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        any: "Custom Women's Shoes",
+        color: "8 Colours",
+        price: "MRP : ₹ 13 295.00"
 
 
     },{
@@ -671,11 +672,11 @@ const productImages = [
         id: 64,
         src: "/p64.png",
         span: "just In",
-        header: "NikeCourt Victory",
+        header: "Nike Pegasus Trail 4 GORE-TEX",
 
-        any: "Men's Shoes",
+        any: "Men's Waterproof Trail-Running Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 14 995.00"
 
 
     },{
@@ -1031,7 +1032,7 @@ const Products = () => {
                 productImages.map((item) => (
                   <div key={item.id} className="flex flex-col items-center text-center border p-4 rounded-lg hover:shadow-md transition duration-300">
                     <Image src={item.src} alt={item.header} height={348} width={348} className="mb-4" />
-                    <span className="text-sm text-gray-500">{item.span}</span>
+                    <span className="text-sm text-red-500">{item.span}</span>
                     <h5 className="font-semibold text-lg mt-2">{item.header}</h5>
                     <p className="text-sm text-gray-700">{item.any}</p>
                     <p className="text-sm text-gray-500">{item.color}</p>
@@ -1042,6 +1043,33 @@ const Products = () => {
             </div>
           </div>
         </main>
+<div>
+
+<h4 className='text-xl font-bold'>Related Categories</h4>
+</div>
+<div className='flex flex-col md:flex-row items-center '>
+<Button2 text='Best Selling Products'/>
+<Button2 text='Best Shoes'/>
+<Button2 text='New Basketball Shoes'/>
+<Button2 text='New Football Shoes'/>
+<Button2 text='New Mens Shoes'/>
+<Button2 text='New Running Shoes'/>
+<Button2 text='Best Mens Shoes'/>
+
+
+
+</div>
+<div className='flex gap-x-3 flex-col md:flex-row'>
+
+<Button2 text='New Jordan Shoes'/>
+<Button2 text='Best Womens Shoes'/>
+<Button2 text='Best Training & Gym'/>
+
+</div>
+
+
+
+
       </section>
       </Wrapper>
     )

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Wrapper from '../shareable/Wrapper'
+import Button from '../shareable/Button'
 
 const EssanImages = [
   {
@@ -26,7 +27,7 @@ const Miss = () => {
       </div>
 
       <main
-        className='mt-9 md:h-[700px] h-[350px md:w-[1344px] w-[500px]]'
+        className='mt-9  '
         style={{
           backgroundImage: 'url(/m1.png)',
           backgroundSize: 'cover',
@@ -43,9 +44,7 @@ const Miss = () => {
         <p className='max-w-xl mx-auto'>
           Your built-to-last, all-week wears—but with style only Jordan Brand can deliver.
         </p>
-        <button className='bg-black text-white px-6 py-2 rounded-lg mt-3'>
-          Shop
-        </button>
+        <Button text='Shop'/>
       </div>
 
       <div className=' mt-8'>

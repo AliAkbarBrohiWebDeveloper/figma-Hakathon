@@ -1,4 +1,5 @@
 
+import Button from '@/components/shareable/Button'
 import Wrapper from '@/components/shareable/Wrapper'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -39,9 +40,7 @@ const MenPage = () => {
 
               <div className='text-center mt-6'>
                 <Link href={'check'}>
-                  <button className='px-6 py-2 bg-black rounded-lg text-white w-full md:w-auto'>
-                    Member Checkout
-                  </button>
+                <Button text=' Member Checkout'/>
                 </Link>
               </div>
             </div>
