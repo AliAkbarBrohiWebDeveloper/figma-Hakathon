@@ -36,7 +36,7 @@ const Helppage = () => {
           <p className='mt-3'>If you enter your PAN information at checkout, you will be able to pay for your order with PayTM or a local credit or debit card.</p>
           <p className='mt-3'>Apple Pay</p>
 
-          <h6 className='mt-4'>Nike Members can store multiple debit or credit cards in their profile for faster checkout. If you're not already a Member, join us today.</h6>
+          <h6 className='mt-4'>Nike Members can store multiple debit or credit cards in their profile for faster checkout. If you are not already a Member, join us today.</h6>
 
           <div className='flex flex-col sm:flex-row gap-4 mt-6'>
             <button className='bg-black px-6 py-2 rounded-lg text-white w-full sm:w-auto'>JOIN US</button>
