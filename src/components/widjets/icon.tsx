@@ -45,11 +45,11 @@ const Icon = () => {
 
 <ul>
 
-    <li className='text-xl font-bold'>Kids'</li>
+    <li className='text-xl font-bold'>Kids</li>
     <li className='mt-6'> Infant & Toddler Shoes</li>
-    <li>Kids' Shoes</li>
-    <li>Kids' Jordan Shoes</li>
-    <li>Kids' Basketball Shoes</li>
+    <li>Kids Shoes</li>
+    <li>Kids Jordan Shoes</li>
+    <li>Kids Basketball Shoes</li>
 </ul>
     </div>
 
