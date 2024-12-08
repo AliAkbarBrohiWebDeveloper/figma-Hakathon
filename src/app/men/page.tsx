@@ -9,7 +9,7 @@ import { MdDelete } from 'react-icons/md'
 const MenPage = () => {
   return (
     <Wrapper>
-      <section>
+      <section className='mt-20'>
 
         <main>
           
