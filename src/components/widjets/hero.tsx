@@ -39,7 +39,7 @@ const Hero = () => {
           backgroundImage: 'url(/h1.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '700px',
+          height: '300px',
           width: '100%',  
         }}
         className="relative"
