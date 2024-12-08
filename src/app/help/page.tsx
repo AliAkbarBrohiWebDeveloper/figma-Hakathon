@@ -50,11 +50,11 @@ const Helppage = () => {
             <p className='mt-2'>Yes, we recommend asking your bank to enable international purchases on your card. You will be notified at checkout if international purchases need to be enabled.</p>
             <p className='mt-6'>Please note, some banks may charge <span className='font-bold underline'>a small transaction fee</span> for international orders.</p>
             <h4 className='mt-5 font-bold'>Can I pay for my order with multiple methods?</h4>
-            <p>No, payment for Nike orders can't be split between multiple payment methods.</p>
+            <p>No, payment for Nike orders canot be split between multiple payment methods.</p>
             <p className='mt-6 font-bold'>What payment method is accepted for SNKRS orders?</p>
             <p className='mt-2'>You can use any accepted credit card to pay for your SNKRS order.</p>
-            <p className='mt-6 font-bold'>Why don't I see Apple Pay as an option?</p>
-            <p className='mt-2'>To see Apple Pay as an option in the Nike App or on Nike.com, you'll need to use a compatible Apple device running the latest OS, be signed in to your iCloud account, and have a supported card in your Wallet. Additionally, you'll need to use Safari to use Apple Pay on Nike.com.</p>
+            <p className='mt-6 font-bold'>Why donot I see Apple Pay as an option?</p>
+            <p className='mt-2'>To see Apple Pay as an option in the Nike App or on Nike.com, you  will need to use a compatible Apple device running the latest OS, be signed in to your iCloud account, and have a supported card in your Wallet. Additionally, you will need to use Safari to use Apple Pay on Nike.com.</p>
             <p>Was this answer helpful?</p>
           </div>
 
@@ -66,7 +66,7 @@ const Helppage = () => {
               <Image src={'/l2.png'} alt='' height={30} width={30}/>
             </div>
             <h3 className='font-semibold mt-6 text-gray-500'>RELATED</h3>
-            <p className='font-semibold'>WHAT ARE NIKE'S DELIVERY OPTIONS?</p>
+            <p className='font-semibold'>WHAT ARE NIKES DELIVERY OPTIONS?</p>
             <p className='font-semibold'>HOW DO I GET FREE DELIVERY ON NIKE ORDERS?</p>
           </div>
         </div>
@@ -92,7 +92,7 @@ const Helppage = () => {
 
             <div className='text-center'>
               <Image src='/cam3.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 mx-48'/>
-              <h3 className='font-semibold'>We'll reply within</h3>
+              <h3 className='font-semibold'>We will reply within</h3>
               <p>five business days</p>
             </div>
 

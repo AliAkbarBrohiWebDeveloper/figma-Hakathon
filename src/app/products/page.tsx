@@ -73,96 +73,96 @@ const productImages = [
     }, {
         id: 7,
         src: "/p7.png",
-        span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        span: "Promo Exclusion",
+        header: "Nike Dunk Low Retro SE",
 
         any: "Men's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 9 695.00"
 
 
     }, {
         id: 8,
         src: "/p8.png",
-        span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        span: "Sustainable Materials",
+        header: "Nike Dri-FIT UV Hyverse",
 
-        any: "Men's Shoes",
+        any: "Men's Short-Sleeve Graphic Fitness Top",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 2 495.00"
 
 
     }, {
         id: 9,
         src: "/p9.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Court Vision Low",
 
         any: "Men's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 5 695.00"
 
 
     }, {
         id: 10,
         src: "/p10.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Dri-FIT Ready",
 
-        any: "Men's Shoes",
-        color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        any: "Men's Short-Sleeve Fitness Top",
+        color: "3 Colours",
+        price: "MRP : ₹ 2 495.00"
 
 
     }, {
         id: 12,
         src: "/p12.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike One Leak Protection: Period",
 
-        any: "Men's Shoes",
-        color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        any: "Women's Mid-Rise 18cm (approx.) Biker Shorts",
+        color: "2 Colours",
+        price: "MRP : ₹ 3 395.00"
 
 
     }, {
         id: 133,
         src: "/p13.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Air Force 1 LV8 3",
 
-        any: "Men's Shoes",
+        any: "Older Kids' Shoe",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 7 495.00"
 
 
     }, {
         id: 14,
         src: "/p14.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Blazer Low Platform",
 
-        any: "Men's Shoes",
+        any: "Women's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 8 195.00"
 
 
     }, {
         id: 15,
         src: "/p15.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Dri-FIT UV Miler",
 
-        any: "Men's Shoes",
-        color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        any: "Women's Shoe",
+        color: "2 Colours",
+        price: "MRP : ₹ 8 195.00"
 
 
     }, {
         id: 16,
         src: "/p6.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Dunk Low Retro",
 
         any: "Men's Shoes",
         color: "1 Colour",
@@ -173,29 +173,29 @@ const productImages = [
         id: 17,
         src: "/p17.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Pro Dri-FIT",
 
-        any: "Men's Shoes",
+        any: "Men's Tight-Fit Sleeveless Top",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 1 495.00"
 
 
     }, {
         id: 18,
         src: "/p18.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Air Max SYSTM",
 
-        any: "Men's Shoes",
+        any: "Older Kids' Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 6 495.00"
 
 
     }, {
         id: 19,
         src: "/p19.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Air Max SYSTM",
 
         any: "Men's Shoes",
         color: "1 Colour",
@@ -206,7 +206,7 @@ const productImages = [
         id: 20,
         src: "/p20.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Alate All U",
 
         any: "Men's Shoes",
         color: "1 Colour",
@@ -217,18 +217,18 @@ const productImages = [
         id: 21,
         src: "/p21.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Court Legacy Lift",
 
-        any: "Men's Shoes",
+        any: "Women's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 7 495.00"
 
 
     }, {
         id: 22,
         src: "/p22.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Air Fo",
 
         any: "Men's Shoes",
         color: "1 Colour",

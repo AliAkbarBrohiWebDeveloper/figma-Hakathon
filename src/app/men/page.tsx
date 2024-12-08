@@ -1,9 +1,4 @@
 
-
-
-
-
-
 import Wrapper from '@/components/shareable/Wrapper'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -65,7 +60,7 @@ const MenPage = () => {
             <div className='flex flex-col justify-between'>
               <h3 className='font-semibold'>Nike Dri-FIT ADV TechKnit Ultra</h3>
               <span className='text-sm text-gray-600'>MRP: ₹ 3,895.00</span>
-              <p className='text-sm'>Men's Short-Sleeve Running Top</p>
+              <p className='text-sm'>Mens Short-Sleeve Running Top</p>
               <p className='text-sm text-gray-500'>Ashen Slate/Cobalt Bliss</p>
 
               <div className='flex justify-between mt-2'>
@@ -86,7 +81,7 @@ const MenPage = () => {
             </div>
             <div className='flex flex-col justify-between'>
               <h4 className='font-semibold'>Nike Air Max 97 SE</h4>
-              <p className='text-sm'>Men's Shoes</p>
+              <p className='text-sm'>Mens Shoes</p>
               <p className='text-sm text-gray-500'>Flat Pewter/Light Bone/Black/White</p>
 
               <div className='flex justify-between mt-2'>
@@ -100,23 +95,23 @@ const MenPage = () => {
             </div>
           </div>
 
-          {/* Favourites Section */}
+          
           <div className='mt-12'>
             <h4 className='text-lg font-semibold'>Favourites</h4>
             <p className='text-sm'>There are no items saved to your favourites.</p>
           </div>
 
-          {/* You Might Also Like Section */}
+        
           <div className='mt-12'>
             <h3 className='text-lg font-semibold'>You Might Also Like</h3>
           </div>
 
-          {/* You Might Also Like Product */}
+          
           <div className='mt-4'>
             <div className='flex flex-col items-center'>
               <Image src={'/f1.png'} alt='' height={431} width={431} />
               <h5 className='font-bold mt-2'>Air Jordan 1 Mid SE Craft</h5>
-              <p className='text-sm'>Men's Shoes</p>
+              <p className='text-sm'>Mens Shoes</p>
               <span className='text-sm text-gray-600'>MRP: ₹ 12,295.00</span>
             </div>
           </div>

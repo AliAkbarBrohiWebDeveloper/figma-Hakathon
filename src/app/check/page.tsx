@@ -10,11 +10,11 @@ const Checkpage = () => {
       <section className='mt-16'>
         <main>
           <div className='flex flex-col md:flex-row gap-10 md:gap-14'>
-            {/* Left Side: Order Details */}
+          
             <div className='flex-1'>
               <h2 className='font-bold text-xl'>How would you like to get your order?</h2>
               <p className='mt-3 text-sm'>
-                Customs regulation for India require a copy of the recipient's KYC. The address on the KYC needs to match the shipping address. Our courier will contact you via SMS/email to obtain a copy of your KYC. The KYC will be stored securely and used solely for the purpose of clearing customs (including sharing it with customs officials) for all orders and returns. If your KYC does not match your shipping address, please click the link for more information. Learn More
+                Customs regulation for India require a copy of the recipients KYC. The address on the KYC needs to match the shipping address. Our courier will contact you via SMS/email to obtain a copy of your KYC. The KYC will be stored securely and used solely for the purpose of clearing customs (including sharing it with customs officials) for all orders and returns. If your KYC does not match your shipping address, please click the link for more information. Learn More
               </p>
 
               <div className='flex gap-x-6 border-4 mt-6 p-2'>
@@ -58,7 +58,7 @@ const Checkpage = () => {
                 <br />
                 <span>A carrier might contact you to confirm delivery.</span>
 
-                <h4 className='text-xl font-bold mt-6'>What's your PAN?</h4>
+                <h4 className='text-xl font-bold mt-6'>Whats your PAN?</h4>
                 <input type="text" placeholder='PAN' className='mt-9 w-full md:w-96' />
                 <br />
                 <p className='mt-6 text-sm'>
@@ -104,7 +104,7 @@ const Checkpage = () => {
                   <Image src={'/r1.png'} alt='' height={208} width={208} />
                 </div>
                 <div>
-                  <h3 className='font-normal'>Nike Dri-FIT ADV TechKnit Ultra Men's Short-Sleeve Running Top</h3>
+                  <h3 className='font-normal'>Nike Dri-FIT ADV TechKnit Ultra Mens Short-Sleeve Running Top</h3>
                   <p>Qty 1</p>
                   <p>₹ 3,895.00</p>
                 </div>
@@ -115,7 +115,7 @@ const Checkpage = () => {
                   <Image src={'/s2.png'} alt='' height={208} width={208} />
                 </div>
                 <div>
-                  <h5 className='font-normal'>Nike Air Max 97 SE Men's Shoes</h5>
+                  <h5 className='font-normal'>Nike Air Max 97 SE Mens Shoes</h5>
                   <p>Qty 1</p>
                   <p>Size UK 8</p>
                   <span>₹ 16,995.00</span>
