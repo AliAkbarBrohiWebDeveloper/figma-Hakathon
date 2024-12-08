@@ -33,7 +33,7 @@ const Helppage = () => {
           <h3 className='text-lg sm:text-xl md:text-2xl font-semibold'>WHAT PAYMENT OPTIONS CAN I USE ON NIKE ORDERS?</h3>
           <p className='mt-2'>We want to make buying your favourite Nike shoes and gear online fast and easy, and we accept the following payment options:</p>
           <p className='mt-2'>Visa, Mastercard, Diners Club, Discover, American Express, Visa Electron, Maestro</p>
-          <p className='mt-3'>If you enter your PAN information at checkout, you'll be able to pay for your order with PayTM or a local credit or debit card.</p>
+          <p className='mt-3'>If you enter your PAN information at checkout, you will be able to pay for your order with PayTM or a local credit or debit card.</p>
           <p className='mt-3'>Apple Pay</p>
 
           <h6 className='mt-4'>Nike Members can store multiple debit or credit cards in their profile for faster checkout. If you're not already a Member, join us today.</h6>

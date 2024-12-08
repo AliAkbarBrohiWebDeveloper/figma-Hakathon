@@ -239,9 +239,9 @@ const productImages = [
         id: 23,
         src: "/p23.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Swoosh",
 
-        any: "Men's Shoes",
+        any: "Women's Medium-support Padded Sports Bra Tank",
         color: "1 Colour",
         price: "MRP : ₹ 10 795.00"
 

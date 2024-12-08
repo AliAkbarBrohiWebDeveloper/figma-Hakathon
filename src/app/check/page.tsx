@@ -51,7 +51,7 @@ const Checkpage = () => {
                 <h5 className='mt-6'>Save this address to my profile</h5>
                 <p>Make this my preferred address</p>
 
-                <h4 className='mt-6 font-bold text-xl'>What's your contact information?</h4>
+                <h4 className='mt-6 font-bold text-xl'>Whati is your contact information?</h4>
                 <input type="text" placeholder='Email' required className='border-2 w-full md:w-96 mt-6' />
                 <br />
                 <input type="text" placeholder='Phone Number' required className='border-2 w-full md:w-96 mt-6' />

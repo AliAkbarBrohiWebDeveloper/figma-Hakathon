@@ -44,7 +44,7 @@ const Joinpage = () => {
 <br />
 
 <p>Sign up for emails to get updates from Nike on products, offers and your Member benefits</p>
-<h3 className='mt-9'>By creating an account, you agree to Nike's Privacy Policy and Terms of Use.</h3>
+<h3 className='mt-9'>By creating an account, you agree to Nikes Privacy Policy and Terms of Use.</h3>
 <button className="mt-5 px-28 py-2 bg-black text-white font-bold">Join Us</button>
 
 <p className="mt-3">Already a Member?
