@@ -19,55 +19,55 @@ const productImages = [
         id: 2,
         src: "/p2.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Court Vision Low Next Nature",
 
         any: "Men's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 4 995.00"
 
 
     }, {
         id: 3,
         src: "/p3.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Air Force 1 PLT.AF.ORM",
 
-        any: "Men's Shoes",
+        any: "Women's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 8 695.00"
 
 
     }, {
         id: 4,
         src: "/p4.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Air Force 1 React",
 
         any: "Men's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 13 295.00"
 
 
     }, {
         id: 5,
         src: "/p5.png",
-        span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        span: "Promo Exclusion",
+        header: "Air Jordan 1 Elevate Low",
 
         any: "Men's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 11 895.00"
 
 
     }, {
         id: 6,
         src: "/p6.png",
         span: "just In",
-        header: "Nike Air Force 1 Mid '07",
+        header: "Nike Standard Issue",
 
         any: "Men's Shoes",
         color: "1 Colour",
-        price: "MRP : ₹ 10 795.00"
+        price: "MRP : ₹ 2 895.00"
 
 
     }, {
