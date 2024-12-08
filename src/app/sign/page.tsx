@@ -1,12 +1,19 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 
 const SignIpage = () => {
   return (
-    <section className="mt-6">
+    <section className="mt-12">
 
 <main className=" text-center">
+
+
+  <div className='flex justify-center items-center'>
+<Image src={'/vector1.png'} alt='' height={17} width={324}/>
+
+  </div>
 
 <div>
 

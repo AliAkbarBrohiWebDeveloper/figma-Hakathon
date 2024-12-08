@@ -1,9 +1,11 @@
 import React from 'react'
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoYoutube } from 'react-icons/bi'
+import Wrapper from '../shareable/Wrapper'
 
 
 const Footer = () => {
   return (
+    <Wrapper>
     
     <footer className='bg-black text-white mt-24 w-auto h-auto md:w-[1440px] md:h-[331px] '>
 
@@ -57,6 +59,7 @@ const Footer = () => {
 
 
     </footer>
+    </Wrapper>
 
   )
 }

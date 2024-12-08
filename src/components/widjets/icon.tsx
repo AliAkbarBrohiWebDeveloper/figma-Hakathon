@@ -1,9 +1,11 @@
 import React from 'react'
+import Wrapper from '../shareable/Wrapper'
 
 const Icon = () => {
   return (
+    <Wrapper>
     <section>
-<main className='container grid grid-cols-1 md:grid-cols-4 text-center mt-9'>
+<main className='container grid grid-cols-1 md:grid-cols-4  mt-9'>
 <div>
 
 <ul>
@@ -58,6 +60,7 @@ const Icon = () => {
 
 
     </section>
+    </Wrapper>
   )
 }
 

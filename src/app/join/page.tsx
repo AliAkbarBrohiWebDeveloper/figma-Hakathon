@@ -1,5 +1,7 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
 
 const Joinpage = () => {
   return (
@@ -7,10 +9,16 @@ const Joinpage = () => {
 
 <main className=" text-center">
 
+<div className='flex justify-center items-center'>
+<Image src={'/vector1.png'} alt='' height={17} width={324}/>
+
+  </div>
+
+
 <div>
 
-<h5 className="text-2xl font-bold">YOUR ACCOUNT FOR EVERYTHING NIKE</h5>
-<p>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community.</p>
+<h5 className="text-2xl font-bold">BECOME A NIKE MEMBER</h5>
+<p className='mt-9'>Create your Nike Member profile and get first access to the very best of Nike products, inspiration and community...</p>
 
 
 <form action="" className="mt-16">
@@ -49,7 +57,7 @@ const Joinpage = () => {
 
 <p className="mt-3">Already a Member?
 
-<Link href={'sign'} className="font-bold underline">Sign</Link>
+<Link href={'sign'} className="font-bold underline mt-5">Sign</Link>
 
 </p>
 

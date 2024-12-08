@@ -19,7 +19,7 @@ const MenPage = () => {
             <div>
               <h3 className='font-semibold'>Free Delivery</h3>
               <p>Applies to orders of ₹ 14,000.00 or more.</p>
-              <button className='mt-2 text-blue-500'>View details</button>
+              <button className='mt-2 underline'>View details</button>
             </div>
 
             <div className='mt-9 md:mt-0'>
@@ -107,7 +107,7 @@ const MenPage = () => {
 
           
           <div className='mt-4'>
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col '>
               <Image src={'/f1.png'} alt='' height={431} width={431} />
               <h5 className='font-bold mt-2'>Air Jordan 1 Mid SE Craft</h5>
               <p className='text-sm'>Mens Shoes</p>

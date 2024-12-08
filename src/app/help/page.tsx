@@ -19,6 +19,7 @@ const Helppage = () => {
           <div className="relative w-full max-w-xs md:max-w-sm">
             <input 
               type="text" 
+              placeholder='What can we help you with?'
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg"
             />
             <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl" />
@@ -80,26 +81,26 @@ const Helppage = () => {
         
           <div className='flex flex-col justify-center gap-8 mt-6 gap-y-6'>
             <div className='text-centern '>
-              <Image src='/phone1.png' alt='Phone Icon' height={64} width={64} className='md:mx-16 ml-48'/>
+              <Image src='/phone1.png' alt='Phone Icon' height={64} width={64} className='md:mx-20 mx-auto'/>
               <h3 className='font-semibold'>000 800 919 0566</h3>
               <h5>Products & Orders: 24 hours a day, 7 days a week</h5>
               <p>Company Info & Enquiries: 07:30 - 16:30, Monday - Friday</p>
             </div>
 
             <div className='text-center'>
-              <Image src='/cam1.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 ml-48'/>
+              <Image src='/cam1.png' alt='Camera Icon' height={64} width={64} className='md:mx-20 mx-auto'/>
               <h3 className='font-semibold'>24 hours a day</h3>
               <p>7 days a week</p>
             </div>
 
             <div className='text-center'>
-              <Image src='/cam3.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 ml-48'/>
+              <Image src='/cam3.png' alt='Camera Icon' height={64} width={64} className='md:mx-20 mx-auto '/>
               <h3 className='font-semibold'>We will reply within</h3>
               <p>five business days</p>
             </div>
 
             <div className='text-center'>
-              <Image src='/cam2.png' alt='Camera Icon' height={64} width={64} className='md:mx-16 ml-48'/>
+              <Image src='/cam2.png' alt='Camera Icon' height={64} width={64} className='md:mx-20 mx-auto '/>
               <h3 className='font-semibold'>STORE LOCATOR</h3>
               <p>Find Nike retail stores near you</p>
             </div>

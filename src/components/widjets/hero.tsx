@@ -46,7 +46,7 @@ const Hero = () => {
       >
       </main>
 
-      <div className='text-center'>
+      <div className='text-center mt-20'>
 
 <h4>First Look</h4>
 <h3 className='text-5xl font-semibold'>Nike Air Max Pulse</h3>

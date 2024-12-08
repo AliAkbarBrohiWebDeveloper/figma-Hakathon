@@ -25,18 +25,18 @@ const Checkpage = () => {
               <div className='mt-6'>
                 <h4>Enter your name and address:</h4>
 
-                <input type="text" placeholder='First Name' required className='border-2 w-full md:w-96 mt-6' />
+                <input type="text" placeholder='First Name' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <br />
-                <input type="text" placeholder='Last Name' required className='border-2 w-full md:w-96 mt-6' />
+                <input type="text" placeholder='Last Name' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <br />
-                <input type="text" placeholder='Address Line 1' required className='border-2 w-full md:w-96 mt-6' />
+                <input type="text" placeholder='Address Line 1' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <br />
-                <input type="text" placeholder='Address Line 2' required className='border-2 w-full md:w-96 mt-6' />
+                <input type="text" placeholder='Address Line 2' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <br />
-                <input type="text" placeholder='Address Line 3' required className='border-2 w-full md:w-96 mt-6' />
+                <input type="text" placeholder='Address Line 3' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <br />
-                <input type="text" placeholder='Postal Code' required className='border-2 w-full md:w-96 mt-6' />
-                <input type="text" placeholder='Locality' required className='border-2 w-full md:w-96 mt-6' />
+                <input type="text" placeholder='Postal Code' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
+                <input type="text" placeholder='Locality' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <br />
                 <div className='flex gap-x-6'>
                   <select className='w-full md:w-auto'>
@@ -52,14 +52,14 @@ const Checkpage = () => {
                 <p>Make this my preferred address</p>
 
                 <h4 className='mt-6 font-bold text-xl'>Whati is your contact information?</h4>
-                <input type="text" placeholder='Email' required className='border-2 w-full md:w-96 mt-6' />
+                <input type="text" placeholder='Email' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <br />
-                <input type="text" placeholder='Phone Number' required className='border-2 w-full md:w-96 mt-6' />
+                <input type="text" placeholder='Phone Number' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <br />
                 <span>A carrier might contact you to confirm delivery.</span>
 
                 <h4 className='text-xl font-bold mt-6'>Whats your PAN?</h4>
-                <input type="text" placeholder='PAN' className='mt-9 w-full md:w-96' />
+                <input type="text" placeholder='PAN' className='mt-9 w-full md:w-96 h-12 rounded-sm' />
                 <br />
                 <p className='mt-6 text-sm'>
                   Enter your PAN to enable payment with UPI, Net Banking or local card methods

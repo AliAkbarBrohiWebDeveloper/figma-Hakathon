@@ -19,6 +19,7 @@ import {
   
 import { Menu } from 'lucide-react'
 import Wrapper from '../shareable/Wrapper'
+import Image from 'next/image'
   
 
 const Headermain = () => {
@@ -26,7 +27,14 @@ const Headermain = () => {
   return(
     <Wrapper>
 
-      <header className="flex justify-center gap-x-9 items-center p-4">
+      <header className="flex justify-between gap-x-9 items-center p-4">
+
+
+        <div>
+<Image src={'/vector1.png'} alt='' height={20} width={58}/>
+
+
+        </div>
     
 
         <div>
@@ -94,8 +102,8 @@ const Headermain = () => {
     <SheetHeader>
       <SheetTitle></SheetTitle>
       <SheetDescription>
-      <div>
-      <ul className=" space-x-4 sm:flex font-semibold text-xl  gap-y-6">
+      
+      <ul className=" space-x-4 sm:flex font-semibold text-xl gap-y-6">
             <li>
               <Link href={'/'}>New & Featured</Link>
             </li>
@@ -119,7 +127,7 @@ const Headermain = () => {
             
           
           </ul>
-        </div>
+        
       </SheetDescription>
     </SheetHeader>
   </SheetContent>
