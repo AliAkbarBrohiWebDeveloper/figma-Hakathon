@@ -44,11 +44,11 @@ const Footer = () => {
         <li className='mt-6'>Sustainability</li>
     </ul>
 </div>
-<div className='flex gap-x-6 items-center'>
-<BiLogoTwitter className='text-2xl font-bold'/>
-<BiLogoFacebook className='text-2xl font-bold'/>
-<BiLogoYoutube className='text-2xl font-bold'/>
-<BiLogoInstagram className='text-2xl font-bold'/>
+<div className='flex gap-x-3 items-center'>
+<BiLogoTwitter className='text-5xl font-bold'/>
+<BiLogoFacebook className='text-5xl font-bold'/>
+<BiLogoYoutube className='text-5xl font-bold'/>
+<BiLogoInstagram className='text-5xl font-bold'/>
 
 
 
