@@ -1,15 +1,15 @@
 import React from 'react'
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoYoutube } from 'react-icons/bi'
-import Wrapper from '../shareable/Wrapper'
+
 
 
 const Footer = () => {
   return (
-    <Wrapper>
     
-    <footer className='bg-black text-white mt-24 w-auto h-auto md:w-[1440px] md:h-[331px] '>
+    
+    <footer className='bg-black text-white mt-24 w-auto h-auto md:w-[1740px] md:h-[331px] '>
 
-<main className='conatiner grid grid-cols-1 md:grid-cols-4  mx-6 py-6'>
+<main className='conatiner grid grid-cols-1 md:grid-cols-4  mx-3 py-3'>
 
 <div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
 
 
     </footer>
-    </Wrapper>
+    
 
   )
 }

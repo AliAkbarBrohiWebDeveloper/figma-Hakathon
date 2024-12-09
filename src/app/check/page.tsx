@@ -38,7 +38,7 @@ const Checkpage = () => {
                 <input type="text" placeholder='Postal Code' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <input type="text" placeholder='Locality' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
                 <br />
-                <div className='flex gap-x-6'>
+                <div className='flex gap-x-6 mt-6'>
                   <select className='w-full md:w-auto'>
                     <option value="">State/Territory</option>
                   </select>
@@ -47,9 +47,11 @@ const Checkpage = () => {
                     <option value="">Pakistan</option>
                   </select>
                 </div>
+                <input type="checkbox"  className='mt-9'/> <span>Save this address to my profile</span>
+                <br />
 
-                <h5 className='mt-6'>Save this address to my profile</h5>
-                <p>Make this my preferred address</p>
+               <input type="checkbox" className='mt-3' /> <span>Make this my preferred address</span>
+              
 
                 <h4 className='mt-6 font-bold text-xl'>Whati is your contact information?</h4>
                 <input type="text" placeholder='Email' required className='border-2 w-full md:w-96 mt-6 h-12 rounded-sm' />
@@ -64,10 +66,17 @@ const Checkpage = () => {
                 <p className='mt-6 text-sm'>
                   Enter your PAN to enable payment with UPI, Net Banking or local card methods
                 </p>
-                <span className='text-sm mt-6'>Save PAN details to Nike Profile</span>
-                <p className='mt-6 text-sm'>
+
+                <input type="checkbox" className='mt-6 h-6' />  <span className='text-sm '>Save PAN details to Nike Profile</span>
+                
+<br />
+
+
+<input type="checkbox" className='mt-6' />   <span className=' text-sm'>
                   I have read and consent to eShopWorld processing my information in accordance with the Privacy Statement and Cookie Policy. eShopWorld is a trusted Nike partner.
-                </p>
+                </span>
+
+             
 
                 <div className='text-center mt-9'>
                   <button className='px-16 py-2 rounded-sm border-2'>Continue</button>

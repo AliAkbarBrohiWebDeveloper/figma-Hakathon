@@ -37,7 +37,7 @@ const Joinpage = () => {
 
 <br />
 
-
+<p className='mt-6 font-semibold'>Select Your Nationality</p>
 <select name="" id="" className='mt-6'>
 <option value=""> India</option>
 <option value="">Pakistan</option>
@@ -46,16 +46,15 @@ const Joinpage = () => {
 </select>
 <br />
 <div className='mt-16 flex justify-center items-center gap-x-6'>
+  <p className='font-semibold'>Select Your Gender</p>
+  <br />
 <input type="radio"  value="Male"name='gender'  />Male
 <input type="radio"  value="Female"name='gender'  />Female
 </div>
 <br />
-<p>Sign up for emails to get updates from Nike on products, offers and your Member benefits</p>
-<h3 className='mt-9'>By creating an account, you agree to Nikes Privacy Policy and Terms of Use.</h3>
-<button className="mt-5 px-28 py-2 bg-black text-white font-bold hover:scale-105 duration-300 rounded-sm">Join Us</button>
-
-
-<p className="mt-3">Already a Member?
+<p className='text-sm'>Sign up for emails to get updates from Nike on products, offers and your Member benefits</p>
+<input type="checkbox" className='mt-9 '/> <span>By creating an account, you agree to Nikes Privacy Policy and Terms of Use</span>
+<p className="mt-9">Already a Member?
 
 <Link href={'sign'} className="font-bold underline mt-5">Sign</Link>
 

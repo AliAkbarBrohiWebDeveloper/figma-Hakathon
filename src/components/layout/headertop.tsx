@@ -23,7 +23,7 @@ const Headertop = () => {
 
       <div>
 
-<Image src={'/c1.png'} alt='' height={24} width={24}/>
+<Image src={'/c1.png'} alt='' height={50} width={50}/>
 
       </div>
 
@@ -62,7 +62,7 @@ const Headertop = () => {
 <Link href={'/'}></Link>
 
 
-
+<Link href={'/'}>New & Featured</Link>
     <Link href={'products'}>Find a Store|</Link>
 
 
@@ -75,6 +75,27 @@ const Headertop = () => {
 
 
     <Link href={'/sign'}>Sign In|</Link>
+
+  
+        
+            
+            
+              <Link href={'men'}>Men</Link>
+            
+            
+              <Link href={'women'}>Women</Link>
+          
+            
+              <Link href={'kids'}>Kids</Link>
+        
+        
+              <Link href={'/sales'}>Sales</Link>
+            
+              <Link href={'SNkRS'}>SNKRS</Link>
+            
+
+
+
 </div>
       </SheetDescription>
     </SheetHeader>
