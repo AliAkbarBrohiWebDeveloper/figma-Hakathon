@@ -2,12 +2,11 @@ import React from 'react'
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoYoutube } from 'react-icons/bi'
 
 
-
 const Footer = () => {
   return (
     
     
-    <footer className='bg-black text-white mt-24 w-auto h-auto md:w-[1740px] md:h-[331px] '>
+    <footer className='bg-black text-white mt-24 w-auto h-auto  px-3  '>
 
 <main className='conatiner grid grid-cols-1 md:grid-cols-4  mx-3 py-3'>
 
@@ -15,7 +14,7 @@ const Footer = () => {
 
 <ul>
 
-    <li className='font-bold'>Find A Store</li>
+    <li className='font-bold text-2xl'>Find A Store</li>
     <li className='mt-6'>Become A Member</li>
     <li className='mt-6'>Sign Up for Email</li>
     <li className='mt-6'>Send Us Feedback</li>
@@ -25,7 +24,7 @@ const Footer = () => {
 </div>
 <div>
     <ul>
-        <li className='font-bold '> Get Help</li>
+        <li className='font-bold  text-2xl mt-4'> Get Help</li>
         <li className='mt-6'>Order Status</li>
         <li className='mt-6'>Delivery</li>
         <li className='mt-6'>Returns</li>
@@ -37,14 +36,14 @@ const Footer = () => {
 <div>
 
     <ul>
-        <li className='font-bold'>About Nike</li>
+        <li className='font-bold text-2xl mt-4'>About Nike</li>
         <li className='mt-6'>News</li>
         <li className='mt-6'>Careers</li>
         <li className='mt-6'>Investors</li>
         <li className='mt-6'>Sustainability</li>
     </ul>
 </div>
-<div className='flex gap-x-3 items-center'>
+<div className='flex gap-x-2 items-center'>
 <BiLogoTwitter className='text-5xl font-bold'/>
 <BiLogoFacebook className='text-5xl font-bold'/>
 <BiLogoYoutube className='text-5xl font-bold'/>

@@ -13,6 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Menu } from 'lucide-react'
+import { BiSearch } from 'react-icons/bi'
 
 
 
@@ -27,7 +28,7 @@ const Headertop = () => {
 
       </div>
 
-<div className='  gap-x-10 hidden md:flex font-bold' >
+<div className='  gap-x-10 hidden md:flex font-bold md:ml-[700px]' >
 
 <Link href={'/'}></Link>
 
@@ -45,7 +46,18 @@ const Headertop = () => {
 
 
     <Link href={'/sign'}>Sign In|</Link>
+
+  
 </div>
+
+<div className="relative w-64  md:hidden sm:block"> 
+          <input 
+            type="text" 
+             
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg"
+          />
+          <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl " />
+        </div>
 
 
 <div>
@@ -75,11 +87,6 @@ const Headertop = () => {
 
 
     <Link href={'/sign'}>Sign In|</Link>
-
-  
-        
-            
-            
               <Link href={'men'}>Men</Link>
             
             

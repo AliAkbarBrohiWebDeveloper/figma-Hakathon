@@ -66,8 +66,9 @@ const Checkpage = () => {
                 <p className='mt-6 text-sm'>
                   Enter your PAN to enable payment with UPI, Net Banking or local card methods
                 </p>
+                
 
-                <input type="checkbox" className='mt-6 h-6' />  <span className='text-sm '>Save PAN details to Nike Profile</span>
+                <input type="checkbox"  className='mt-3'/>  <span className='text-sm '>Save PAN details to Nike Profile</span>
                 
 <br />
 
