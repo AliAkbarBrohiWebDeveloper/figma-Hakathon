@@ -22,8 +22,8 @@ const Miss = () => {
   return (
     <Wrapper>
     <section className='mt-20'>
-      <div className='font-bold text-center'>
-        Don’t Miss
+      <div className='font-bold'>
+        Donot Miss
       </div>
 
       <main
@@ -52,7 +52,7 @@ const Miss = () => {
       </div>
 
       
-      <div className='flex flex-wrap justify-center gap-6 mt-4'>
+      <div className='flex flex-col md:flex-row justify-center gap-6 mt-4'>
         {EssanImages.map((item) => (
           <div key={item.id} className='flex flex-col items-center'>
             <Image

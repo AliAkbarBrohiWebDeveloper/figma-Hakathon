@@ -11,7 +11,7 @@ const SignIpage = () => {
 
 
   <div className='flex justify-center items-center'>
-<Image src={'/vector1.png'} alt='' height={17} width={324}/>
+<Image src={'/vector1.png'} alt='' height={17} width={200}/>
 
   </div>
 
