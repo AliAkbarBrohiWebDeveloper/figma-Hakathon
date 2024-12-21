@@ -999,31 +999,38 @@ const Products = () => {
               <li>Accessories & Equipment</li>
             </ul>
             
-            {/* Gender Filters */}
-            <div className="mt-8">
-              <select className="w-full p-2 border border-gray-300 rounded-lg">
-                <option value="">Male</option>
-                <option value="">Female</option>
-                <option value="">Unisex</option>
-              </select>
+          
+            <div className='mt-16'>
+                <h5 className='text-xl font-bold'>Gender</h5>
+<input type="checkbox"   className='mt-3'/> Male
+<br />
+<input type="checkbox"  className='mt-3' /> Women
+<br />
+<input type="checkbox"  className='mt-3' />Unisex 
+
+            </div>
+
+
+            <div className='mt-5'>
+                <h5 className='text-xl font-bold'>Kids</h5>
+<input type="checkbox"   className='mt-3'/> Boys
+<br />
+<input type="checkbox"  className='mt-3' /> Girls
+
+
+            </div>
+
+
+
+            <div className='mt-5'>
+                <h5 className='text-xl font-bold'>Shop By Price</h5>
+<input type="checkbox"   className='mt-3'/>Under ₹ 2 500.00
+<br />
+<input type="checkbox"  className='mt-3' />₹ 2 501.00 - ₹ 7 500.0
+
             </div>
             
-            {/* Age Group Filters */}
-            <div className="mt-6">
-              <select className="w-full p-2 border border-gray-300 rounded-lg">
-                <option value="">Boys</option>
-                <option value="">Girls</option>
-              </select>
             </div>
-            
-            
-            <div className="mt-6">
-              <select className="w-full p-2 border border-gray-300 rounded-lg">
-                <option value="">Under ₹ 2,500.00</option>
-                <option value="">₹ 2,501.00 - ₹ 7,500.00</option>
-              </select>
-            </div>
-          </div>
           
           
           <div className="w-full md:w-3/4">

@@ -20,7 +20,7 @@ import { BiSearch } from 'react-icons/bi'
 const Headertop = () => {
   return (
     <Wrapper>
-    <header className='flex justify-between items-center gap-x-9'>
+    <header className='flex justify-between items-center gap-x-9  md:bg-[#F5F5F5]'>
 
       <div>
 
@@ -34,18 +34,18 @@ const Headertop = () => {
 
 
 
-    <Link href={'products'}>Find a Store|</Link>
+    <Link href={'products'}>Find a Store |</Link>
 
 
 
 
-  <Link href={'help'}>Help|</Link>
+  <Link href={'help'}>Help |</Link>
 
 
-  <Link href={'/join'}>Join Us|</Link>
+  <Link href={'/join'}>Join Us |</Link>
 
 
-    <Link href={'/sign'}>Sign In|</Link>
+    <Link href={'/sign'}>Sign In |</Link>
 
   
 </div>
@@ -75,30 +75,30 @@ const Headertop = () => {
 
 
 <Link href={'/'}>New & Featured</Link>
-    <Link href={'products'}>Find a Store|</Link>
+    <Link href={'products'}>Find a Store</Link>
 
 
 
 
-  <Link href={'help'}>Help|</Link>
+  <Link href={'help'}>Help</Link>
 
 
-  <Link href={'/join'}>Join Us|</Link>
+  <Link href={'/join'}>Join Us</Link>
 
 
-    <Link href={'/sign'}>Sign In|</Link>
+    <Link href={'/sign'}>Sign In</Link>
               <Link href={'men'}>Men</Link>
             
             
-              <Link href={'women'}>Women</Link>
+              <Link href={''}>Women</Link>
           
             
-              <Link href={'kids'}>Kids</Link>
+              <Link href={''}>Kids</Link>
         
         
-              <Link href={'/sales'}>Sales</Link>
+              <Link href={''}>Sales</Link>
             
-              <Link href={'SNkRS'}>SNKRS</Link>
+              <Link href={''}>SNKRS</Link>
             
 
 
