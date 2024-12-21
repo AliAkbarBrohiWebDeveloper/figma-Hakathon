@@ -28,7 +28,7 @@ const Headermain = () => {
               <Link href={'/'}>New & Featured</Link>
             </li>
             <li>
-              <Link href={'men'}>Men</Link>
+              <Link href={''}>Men</Link>
             </li>
             <li>
               <Link href={''}>Women</Link>
@@ -58,11 +58,11 @@ const Headermain = () => {
           <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl " />
         </div>
 <div>
-  <Link href={'/heart'}><BiHeart className='text-4xl font-bold'/></Link>
+  <Link href={''}><BiHeart className='text-4xl font-bold'/></Link>
 
 </div>
 <div>
-  <Link href={'/cart'}><BiCart className='text-3xl font-bold'/></Link>
+  <Link href={'men'}><BiCart className='text-3xl font-bold'/></Link>
 
 
 </div>
