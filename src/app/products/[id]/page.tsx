@@ -4,6 +4,8 @@
 
 import Wrapper from '@/components/shareable/Wrapper';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
+
 
 
 const products = [
@@ -310,16 +312,18 @@ const products = [
 
 ];
 
-const ProductDetailPage = ({ params }: { params: { id: string } }) => {
+const ProductDetailPage = () => {
   
-  const productId = parseInt(params.id, 10);
-
   
-  const product = products.find((p) => p.id === productId);
-
-  if (!product) {
-    return <div>Product not found</div>;
-  }
+    const params=useParams();
+    const id =params.id;
+    const product= products.find((pro)=>pro.id=== Number(id))
+   
+ 
+ 
+   if (!product) {
+     return <div>Product not found</div>;
+   }
 
   return (
     <Wrapper>
@@ -337,4 +341,4 @@ const ProductDetailPage = ({ params }: { params: { id: string } }) => {
   );
 };
 
-export default ProductDetailPage;
+export default ProductDetailPage

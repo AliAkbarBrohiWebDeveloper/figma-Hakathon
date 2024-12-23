@@ -34,13 +34,13 @@ const Headermain = () => {
               <Link href={''}>Women</Link>
             </li>
             <li>
-              <Link href={'/signup'}>Kids</Link>
+              <Link href={''}>Kids</Link>
             </li>
             <li>
-              <Link href={'/signup'}>Sales</Link>
+              <Link href={''}>Sales</Link>
             </li>
             <li>
-              <Link href={'/signup'}>SNKRS</Link>
+              <Link href={''}>SNKRS</Link>
             </li>
             
             
