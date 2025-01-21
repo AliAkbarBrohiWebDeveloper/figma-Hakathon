@@ -3,7 +3,7 @@ import React from 'react'
 import Wrapper from '../shareable/Wrapper';
 import Button from '../shareable/Button';
 import Link from 'next/link';
-import { Iproduct } from '@/app/types/interface';
+
 
 const GearUpImages = [
   {
