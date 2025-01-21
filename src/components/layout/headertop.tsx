@@ -81,7 +81,7 @@ const Headertop = () => (
             <SheetHeader>
               <SheetTitle></SheetTitle>
               <SheetDescription>
-                <div className='flex flex-col gap-y-6 text-xl  py-6 font-bold text-white' >
+                <div className='flex flex-col gap-y-6 text-sm  py-6 font-bold  text-white' >
 
                   <Link href={'/'}></Link>
 

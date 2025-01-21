@@ -9,7 +9,6 @@ import React from 'react';
 import { Iproduct } from '../types/interface';
 
 
-
 async function Products() {
 
   const proresult = await client.fetch(`
@@ -52,7 +51,27 @@ async function Products() {
                 </ul>
               </div>
 
-            
+
+              <div className='mt-16'>
+                <h5 className='text-xl font-bold'>Gender</h5>
+<input type="checkbox"   className='mt-3'/> Male
+<br />
+<input type="checkbox"  className='mt-3' /> Women
+<br />
+<input type="checkbox"  className='mt-3' />Unisex 
+
+            </div>
+
+
+
+              <div className='mt-5'>
+                <h5 className='text-xl font-bold'>Kids</h5>
+<input type="checkbox"   className='mt-3'/> Boys
+<br />
+<input type="checkbox"  className='mt-3' /> Girls
+
+
+            </div>
               <div>
                 <h5 className="text-md font-semibold text-gray-700">Shop By Price</h5>
                 <div className="mt-3">

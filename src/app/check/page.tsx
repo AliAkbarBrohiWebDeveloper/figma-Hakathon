@@ -515,10 +515,6 @@
 
 
 
-
-
-
-
 "use client";
 
 import Wrapper from '@/components/shareable/Wrapper';
@@ -821,38 +817,6 @@ const Checkpage = () => {
 };
 
 export default Checkpage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
