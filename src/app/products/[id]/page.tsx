@@ -1,344 +1,493 @@
+// "use client"
+// import Wrapper from '@/components/shareable/Wrapper';
+// import { client } from '@/sanity/lib/client';
+// import { urlFor } from '@/sanity/lib/image';
+// import Image from 'next/image';
+// import React, { useState } from 'react';
+// import { FaMinus, FaPlus } from 'react-icons/fa'
 
-"use client"
+// async function ProductDetailPage({ params }: { params: { id: string } }) {
+//   // Fetch product details from Sanity based on the product ID
+//   const data = await client.fetch(`
+//     *[_type == "product" && _id == $id][0] {
+//       _id,
+//       productName,
+//       category,
+//       price,
+//       inventory,
+//       colors,
+//       status,
+//       image,
+//       description
+//     }
+//   `, { id: params.id }); // pass the dynamic id to the query
+
+//   // Check if the product exists
+//   if (!data) {
+//     return <div>Product not found</div>;
+//   }
 
 
-import Wrapper from '@/components/shareable/Wrapper';
-import Image from 'next/image';
-import { useParams } from 'next/navigation';
+//   const [quantity,setQuantity]=useState(1)
 
 
-
-const products = [
-  {
-    id: 1,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p1.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-  {
-    id: 2,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p2.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-
-  {
-    id: 3,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p3.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-  {
-    id: 4,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p4.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-  {
-    id: 5,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p5.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-  {
-    id: 6,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p6.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-  {
-    id: 7,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p7.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-  {
-    id: 4,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p4.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
+// const increaseQuantity=()=>{
+//     setQuantity(+1)
+// }
 
 
 
+// const decreaseQuantity=()=>{
+//     setQuantity(-1)
+// }
+//   return (
 
-  {
-    id: 8,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p8.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
+// <Wrapper>
+//     <section className="py-12 px-4">
+//       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-x-12">
+
+//         {/* Product Image */}
+//         <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+//           <Image 
+//             src={urlFor(data.image).url()} 
+//             alt={data.productName} 
+//             height={400} 
+//             width={400} 
+//             className="object-cover rounded-sm shadow-xl"
+//           />
+//         </div>
+
+//         {/* Product Details */}
+//         <div className="mt-8 md:mt-0 md:w-1/2 space-y-4">
+//           <h1 className="text-3xl font-semibold text-gray-900">{data.productName}</h1>
+//           <p className="text-lg text-gray-700">{data.description}</p>
+
+//           <div className="flex flex-wrap gap-4">
+//             <p className="text-lg text-gray-600">Category: <span className="font-medium">{data.category}</span></p>
+//             <p className="text-lg text-gray-600">Price: <span className="font-medium text-xl text-green-600">${data.price}</span></p>
+//             <p className="text-lg text-gray-600">Inventory: <span className="font-medium">{data.inventory}</span></p>
+//             <p className="text-lg text-gray-600">Status: <span className="font-medium">{data.status}</span></p>
+//           </div>
 
 
-  {
-    id: 9,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p9.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
+//             <div>
+//               <h3 className="text-xl font-bold text-gray-900">Available Colors</h3>
+//               <span className='text-xl font-sm '>{data.colors}</span>
+
+//             </div>
 
 
-  {
-    id: 10,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p10.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
+//             <div>
+
+// <button onClick={increaseQuantity} ></button>
+// <span><FaPlus/></span>
 
 
-  {
-    id: 12,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p12.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-  {
-    id: 13,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p13.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-  {
-    id: 14,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p14.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
+//             </div>
 
 
 
-  {
-    id: 15,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p15.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
+//           <div className="mt-6">
+//             <button className="w-auto py-3 px-6 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition duration-300 ease-in-out">
+//               Add to Cart
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//     </Wrapper>
+//   );
+// }
 
-
-  {
-    id: 16,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p6.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-    button: "Add Cart",
-  },
-  {
-    id: 17,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p17.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  },
+// export default ProductDetailPage;
 
 
 
-  {
-    id: 18,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p18.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  }
-  ,
 
 
 
-  {
-    id: 19,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p19.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  }
-  ,
 
 
 
-  {
-    id: 20,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p20.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  }
-  ,
 
 
 
-  {
-    id: 21,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p21.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  }
-  ,
 
 
 
-  {
-    id: 22,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p22.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  }
-  ,
 
 
 
-  {
-    id: 23,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p23.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  }
-
-  ,
 
 
 
-  {
-    id: 24,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p24.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  }
+// "use client";
+// import Wrapper from '@/components/shareable/Wrapper';
+// import { client } from '@/sanity/lib/client';
+// import { urlFor } from '@/sanity/lib/image';
+// import Image from 'next/image';
+// import React, { useState, useEffect } from 'react';
+// import { FaMinus, FaPlus } from 'react-icons/fa';
+
+// function ProductDetailPage({ params }: { params: { id: string } }) {
+//   const [data, setData] = useState<any>(null); // Initialize state for product data
+//   const [quantity, setQuantity] = useState(1); // Initialize quantity state
+
+//   // Fetch product data when the component mounts or params.id changes
+//   useEffect(() => {
+//     const fetchProductData = async () => {
+//       const productData = await client.fetch(`
+//         *[_type == "product" && _id == $id][0] {
+//           _id,
+//           productName,
+//           category,
+//           price,
+//           inventory,
+//           colors,
+//           status,
+//           image,
+//           description
+//         }
+//       `, { id: params.id });
+
+//       setData(productData);
+//     };
+
+//     fetchProductData();
+//   }, [params.id]);
 
 
-  ,
+//   const increaseQuantity = () => {
+//     if (quantity < data?.inventory) {
+//       setQuantity(quantity + 1);
+//     }
+//   };
+
+
+//   const decreaseQuantity = () => {
+//     if (quantity > 1) {
+//       setQuantity(quantity - 1);
+//     }
+//   };
 
 
 
-  {
-    id: 26,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p26.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  },
-  {
-    id: 27,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p27.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  },
-  {
-    id: 28,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p28.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  },
-  {
-    id: 29,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p29.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  },
-  {
-    id: 30,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p30.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  },
+// //   If product data is not loaded yet, show a loading state
+//   if (!data) {
+//     return <div></div>;
+//   }
 
-  {
-    id: 31,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p31.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  },
-  {
-    id: 32,
-    header: "Nike Air Force 1 PLT.AF.ORM",
-    image: "/p32.png",
-    description:
-      "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
-      button: "Add Cart",
-  }
+//   const totalPrice=(data.price * quantity).toFixed(2)
+
+//   return (
+//     <Wrapper>
+//       <section className="py-12 px-4">
+//         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-x-12">
+
+//           {/* Product Image */}
+//           <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+//             <Image 
+//               src={urlFor(data.image).url()} 
+//               alt={data.productName} 
+//               height={400} 
+//               width={400} 
+//               className="object-cover rounded-sm shadow-xl"
+//             />
+//           </div>
+
+//           {/* Product Details */}
+//           <div className="mt-8 md:mt-0 md:w-1/2 space-y-4">
+//             <h1 className="text-3xl font-semibold text-gray-900">{data.productName}</h1>
+//             <p className="text-lg text-gray-700">{data.description}</p>
+
+//             <div className="flex flex-wrap gap-4">
+//               <p className="text-lg text-gray-600">Category: <span className="font-medium">{data.category}</span></p>
+//               <p className="text-lg text-gray-600">Price: <span className="font-medium text-xl text-green-600">{totalPrice}</span></p>
+//               <p className="text-lg text-gray-600">Inventory: <span className="font-medium">{data.inventory}</span></p>
+//               <p className="text-lg text-gray-600">Status: <span className="font-medium">{data.status}</span></p>
+//             </div>
+
+//             {/* Available Colors */}
+//             <div>
+//               <h3 className="text-xl font-bold text-gray-900">Available Colors</h3>
+//               <span className="text-xl font-sm">{data.colors}</span>
+//             </div>
+
+//             {/* Quantity Selector */}
+//             <div className="flex items-center  gap-x-20 mt-4">
+//               <button 
+//                 onClick={decreaseQuantity} 
+//                 className="flex items-center justify-center w-8 h-8  rounded-full disabled:opacity-50"
+//                 disabled={quantity <= 1}
+//               >
+//                 <FaMinus />
+//               </button>
+//               <span className="text-xl font-semibold">{quantity}</span>
+//               <button 
+//                 onClick={increaseQuantity} 
+//                 className="flex items-center justify-center w-8 h-8 rounded-full disabled:opacity-50"
+//                 disabled={quantity >= data.inventory}
+//               >
+//                 <FaPlus />
+//               </button>
+//             </div>
+
+//             {/* Add to Cart Button */}
+//             <div className="mt-6">
+//               <button className="w-auto py-3 px-6 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition duration-300 ease-in-out">
+//                 Add to Cart
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+//     </Wrapper>
+//   );
+// }
+
+// export default ProductDetailPage;
 
 
-];
 
-const ProductDetailPage = () => {
-  
-  
-    const params=useParams();
-    const id =params.id;
-    const product= products.find((pro)=>pro.id=== Number(id))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { FaMinus, FaPlus } from "react-icons/fa";
+import Image from "next/image";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
+import { addToCart } from "@/app/Redux/cartslice";
+
+
+import { toast, ToastContainer } from 'react-toastify';  // Import toastify
+import 'react-toastify/dist/ReactToastify.css'
+
+
+interface Product {
+  _id: string;
+  productName: string;
+  category: string;
+  price: number;
+  inventory: number;
+  colors: string[];
+  status: string;
+  image: string; // You can refine this if you know the structure of the image
+  description:string
+}
+
+
+
+
+
+const ProductDetailPage = ({ params }: { params: { id: string } }) => {
+  const dispatch = useDispatch();
+  const [data, setData] = useState<Product|null>(null);
+  const [quantity, setQuantity] = useState(1);
+
+  useEffect(() => {
+    const fetchProductData = async () => {
+      const productData = await client.fetch(
+        `*[_type == "product" && _id == $id][0] {
+          _id,
+          productName,
+          category,
+          price,
+          inventory,
+          colors,
+          status,
+          image,
+          description
+        }`,
+        { id: params.id }
+      );
+      setData(productData);
+    };
+
+    fetchProductData();
+  }, [params.id]);
+
+  // const increaseQuantity = () => {
+  //   if (quantity < data?.inventory) {
+  //     setQuantity(quantity + 1);
+  //   }
+  // };
+
+  // const decreaseQuantity = () => {
+  //   if (quantity > 1) {
+  //     setQuantity(quantity - 1);
+  //   }
+  // };
+
+  const increaseQuantity = () => {
    
- 
- 
-   if (!product) {
-     return <div>Product not found</div>;
-   }
+    if (data?.inventory && quantity < data.inventory) {
+      setQuantity(quantity + 1);
+    }
+  };
+  
+  const decreaseQuantity = () => {
+   
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+  
+
+
+  const handleAddToCart = () => {
+    if (data) {
+      const cartItem = {
+        id: data._id,
+        name: data.productName,
+        price: data.price,
+        quantity: quantity,
+        image: urlFor(data.image).url(),
+        inventory: data.inventory,
+      };
+
+      dispatch(addToCart(cartItem));
+
+
+      toast.success("Item added to cart Successfully!", {
+        position: "top-right",
+        autoClose: 5000, // 5 seconds
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+
+
+
+    }
+  };
+
+  if (!data) {
+    return <div>Loading...
+      </div>;
+  }
+
+  const totalPrice = (data.price * quantity).toFixed(2);
 
   return (
-    <Wrapper>
-    <div className='flex flex-col md:flex-row  justify-center items-center gap-6 mt-9'>
-    <div>
-      <Image src={product.image} alt={product.header} height={653} width={653} />
+    <section className="py-12 px-4">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-x-12">
+        {/* Product Image */}
+        <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
+          <Image
+            src={urlFor(data.image).url()}
+            alt={data.productName}
+            height={400}
+            width={400}
+            className="object-cover rounded-sm shadow-xl"
+          />
+        </div>
+
+
+        <div className="mt-8 md:mt-0 md:w-1/2 space-y-4">
+          <h1 className="text-3xl font-semibold text-gray-900">{data.productName}</h1>
+          <p className="text-lg text-gray-700">{data.description}</p>
+
+          <div className="flex flex-wrap gap-4">
+            <p className="text-lg text-gray-600">
+              Category: <span className="font-medium">{data.category}</span>
+            </p>
+            <p className="text-lg text-gray-600">
+              Price: <span className=" text-xl text-green-600 font-semibold">PKR: {totalPrice}</span>
+            </p>
+            <p className="text-lg text-gray-600">
+              Inventory: <span className="font-medium">{data.inventory}</span>
+            </p>
+            <p className="text-lg text-gray-600">
+              Status: <span className="font-medium">{data.status}</span>
+            </p>
+          </div>
+
+
+          <div>
+            <h3 className="text-xl font-bold text-gray-900">Available Colors</h3>
+            <span className="text-xl font-sm">{data.colors}</span>
+          </div>
+
+
+          <div className="flex items-center gap-x-20 mt-4">
+            <button
+              onClick={decreaseQuantity}
+              className="flex items-center justify-center w-8 h-8 rounded-full disabled:opacity-50"
+              disabled={quantity <= 1}
+            >
+              <FaMinus />
+            </button>
+            <span className="text-xl font-semibold">{quantity}</span>
+            <button
+              onClick={increaseQuantity}
+              className="flex items-center justify-center w-8 h-8 rounded-full disabled:opacity-50"
+              disabled={quantity >= data.inventory}
+            >
+              <FaPlus />
+            </button>
+          </div>
+
+
+          <div className="mt-6">
+            <button
+              onClick={handleAddToCart}
+              className="w-auto py-3 px-6 bg-red-500 text-white font-semibold rounded-md shadow-md hover:red-blue-700 transition duration-300 ease-in-out"
+            >
+              Add to Cart
+            </button>
+          </div>
+         
+        </div>
       </div>
-      <div>
-      <h3 className='font-bold text-2xl '>{product.header}</h3>
-      <p className='mt-3'>{product.description}</p>
-      <button className='px-7 py-2 bg-black text-white rounded-xl mt-6 text-xl  hover:scale-105 duration-300'>{product.button}</button>
-      </div>
-    </div>
-    </Wrapper>
+      <ToastContainer/>
+    </section>
   );
 };
 
-export default ProductDetailPage
+export default ProductDetailPage;
+
+
+
+
+
+
+
+
+
+
+

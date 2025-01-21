@@ -4,6 +4,7 @@ import "./globals.css";
 import Headertop from "@/components/layout/headertop";
 import HeaderMain from "@/components/layout/HeaderMain";
 import Footer from "@/components/layout/footer";
+import ReduxProvider from "./Redux/Provider";
 
 
 
@@ -33,10 +34,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ReduxProvider>
         <Headertop/>
         <HeaderMain/>
         {children}
         <Footer/>
+        </ReduxProvider>
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import Icon from '@/components/widjets/icon'
 import Miss from '@/components/widjets/miss'
 import React from 'react'
 
+
 const page = () => {
   return (
     <div>

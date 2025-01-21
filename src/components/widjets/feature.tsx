@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import Wrapper from '../shareable/Wrapper';
 import Button from '../shareable/Button';
+import Link from 'next/link';
+import { Iproduct } from '@/app/types/interface';
 
 const GearUpImages = [
   {
@@ -51,7 +53,7 @@ const Feature = () => {
     
       </main>
 
-      <div className='text-center mt-3'>
+      <div className='text-center md:mt-3'>
         <h3 className='text-2xl font-bold'>STEP INTO WHAT FEELS GOOD</h3>
         <p>Cause everyone should know the feeling of running in that perfect pair.</p>
         <Button text='Find Your Shoe'/>
@@ -65,6 +67,7 @@ const Feature = () => {
       <div className='flex  flex-col md:flex-row justify-center gap-6 mt-8'>
         {GearUpImages.map((product) => (
           <div key={product.id} className='flex flex-col items-center text-center mt-6'>
+            <Link href={`/products/${product.id}`}>
             <Image
               src={product.src}
               alt={product.header}
@@ -72,6 +75,7 @@ const Feature = () => {
               width={300}
               className='rounded-lg'
             />
+            </Link>
             <h3 className='mt-4 text-lg font-semibold'>{product.header}</h3>
             <p>{product.para}</p>
           </div>

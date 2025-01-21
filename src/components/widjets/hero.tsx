@@ -29,7 +29,7 @@ const Hero = () => {
     <Wrapper>
     <section className='mt-10'>
 
-      <div className='text-center'>
+      <div className='text-center bg-gray-200 py-5 '>
 
         <h2 className='font-bold'>Hello Nike App</h2>
         <p className='text-sm'>Download the app to access everything Nike. Get Your Great</p>
@@ -39,10 +39,9 @@ const Hero = () => {
           backgroundImage: 'url(/h1.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          // height: '300px',
-          // width: '100%',  
+           
         }}
-        className="relative md:h-[700px] h-[300px] w-auto "
+        className="relative md:h-[700px] h-[300px] w-auto mt-9 "
       >
       </main>
 
