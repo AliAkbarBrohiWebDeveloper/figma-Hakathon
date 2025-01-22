@@ -9,7 +9,6 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { addToCart } from "@/app/Redux/cartslice";
 
-
 import { toast, ToastContainer } from 'react-toastify';  // Import toastify
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -196,6 +195,34 @@ const ProductDetailPage = ({ params }: { params: { id: string } }) => {
 };
 
 export default ProductDetailPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
