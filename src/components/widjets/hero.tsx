@@ -4,7 +4,6 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Wrapper from '../shareable/Wrapper';
-import Button from "@/components/shareable/Button"
 import { client } from '@/sanity/lib/client';
 import { Iproduct } from '@/app/types/interface';
 import Link from 'next/link';
@@ -48,30 +47,7 @@ const Hero = () => {
   return (
     <Wrapper>
       <section className='mt-10'>
-        <div className='text-center bg-gray-200 py-5'>
-          <h2 className='font-bold'>Hello Nike App</h2>
-          <p className='text-sm'>Download the app to access everything Nike. Get Your Great</p>
-        </div>
-        
-        <main
-          style={{
-            backgroundImage: 'url(/h1.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-          className="relative md:h-[700px] h-[300px] w-auto mt-9"
-        ></main>
-
-        <div className='text-center mt-28'>
-          <h4>First Look</h4>
-          <h3 className='text-5xl font-semibold'>Nike Air Max Pulse</h3>
-          <p className='mt-4'>Extreme comfort. Hyper durable. Max volume. Introducing the Air Max Pulse —designed to push you past your limits and help you go to the max.</p>
-          <div className='flex justify-center items-center gap-x-9'>
-            <Button text='Notify Me'/>
-            <Button text='Shop Air Max'/>
-          </div>
-        </div>
-
+       
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-6 mt-11">
           {data.map((product: Iproduct) => (
             <div

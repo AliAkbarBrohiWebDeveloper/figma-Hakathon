@@ -52,20 +52,7 @@ const Feature = () => {
   return (
     <Wrapper>
       <section className="mt-5">
-        <div className="font-bold text-xl">Featured</div>
-
-        <main
-          className="mt-16"
-          style={{
-            backgroundImage: 'url(/bg1.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            height: '700px',
-            width: '100%',
-          }}
-        >
-          {/* You can add more content here */}
-        </main>
+       
 
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-6 mt-9">
           {products.map((product: Iproduct) => (
