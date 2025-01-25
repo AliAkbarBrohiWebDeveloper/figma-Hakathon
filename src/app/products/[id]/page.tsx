@@ -21,7 +21,7 @@ interface Product {
   inventory: number;
   colors: string[];
   status: string;
-  image: string; // You can refine this if you know the structure of the image
+  image: string; 
   description:string
 }
 
@@ -54,17 +54,7 @@ const ProductDetailPage = ({ params }: { params: { id: string } }) => {
     fetchProductData();
   }, [params.id]);
 
-  // const increaseQuantity = () => {
-  //   if (quantity < data?.inventory) {
-  //     setQuantity(quantity + 1);
-  //   }
-  // };
-
-  // const decreaseQuantity = () => {
-  //   if (quantity > 1) {
-  //     setQuantity(quantity - 1);
-  //   }
-  // };
+  
 
   const increaseQuantity = () => {
    
@@ -97,7 +87,7 @@ const ProductDetailPage = ({ params }: { params: { id: string } }) => {
 
 
       toast.success("Item added to cart Successfully!", {
-        position: "top-right",
+        position: "bottom-right",
         autoClose: 5000, // 5 seconds
         hideProgressBar: false,
         closeOnClick: true,
@@ -112,7 +102,8 @@ const ProductDetailPage = ({ params }: { params: { id: string } }) => {
   };
 
   if (!data) {
-    return <div>Loading...
+    return <div>
+      
       </div>;
   }
 
@@ -181,7 +172,7 @@ const ProductDetailPage = ({ params }: { params: { id: string } }) => {
           <div className="mt-6">
             <button
               onClick={handleAddToCart}
-              className="w-auto py-3 px-6 bg-red-500 text-white font-semibold rounded-md shadow-md hover:red-blue-700 transition duration-300 ease-in-out"
+              className="w-auto py-3 px-6 bg-indigo-800 text-white font-semibold rounded-md shadow-md hover:red-blue-700 transition duration-300 ease-in-out"
             >
               Add to Cart
             </button>

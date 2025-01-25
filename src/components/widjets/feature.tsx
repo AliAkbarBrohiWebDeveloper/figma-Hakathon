@@ -39,14 +39,14 @@ const Feature = () => {
     };
 
     fetchProducts();
-  }, []); // Empty dependency array means it runs only once when the component mounts
+  }, []); 
 
   if (loading) {
-    return <div></div>;  // Show a loading state while the data is being fetched
+    return <div></div>;  
   }
 
   if (products.length === 0) {
-    return <div></div>;  // If no products found, display this message
+    return <div></div>;  
   }
 
   return (

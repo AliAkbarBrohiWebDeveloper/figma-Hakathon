@@ -10,6 +10,7 @@ import { client } from '@/sanity/lib/client';
 import { IProduct } from '@/app/types/interface';
 
 const Headermain = () => {
+
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState<IProduct[]>([]);
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -37,15 +38,15 @@ const Headermain = () => {
     };
 
     fetchProducts();
-  }, []); // Empty dependency array means this runs only once when the component mounts
+  }, []); 
 
-  // Filter products based on searchTerm for both productName and category
+
   useEffect(() => {
     const timer = setTimeout(() => {
       if (searchTerm) {
         const filtered = products.filter(product =>
           product.productName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          product.category.toLowerCase().includes(searchTerm.toLowerCase()) // Check category as well
+          product.category.toLowerCase().includes(searchTerm.toLowerCase()) 
         );
         setFilteredProducts(filtered);
       } else {
@@ -53,7 +54,7 @@ const Headermain = () => {
       }
     }, 300);
 
-    return () => clearTimeout(timer); // Cleanup on term change
+    return () => clearTimeout(timer); 
   }, [searchTerm, products]);
 
  
@@ -80,7 +81,7 @@ const Headermain = () => {
           </ul>
         </div>
 
-        {/* Search bar */}
+      
         <div className="relative w-64 hidden md:block">
           <input
             type="text"
@@ -119,13 +120,13 @@ const Headermain = () => {
             {filteredProducts.map((product) => (
               <li key={product._id} className="p-2 rounded-md flex gap-4">
                 <div>
-                  {/* Product Name as a Link */}
+                
                   <Link href={`/products/${product._id}`} onClick={handleProductClick}>
-                    {/* <p className="text-sm">{product.productName}</p> */}
+                  
                  
                   <p className="text-sm ">{product.category}</p>
                   </Link>
-                   {/* Display category as well */}
+               
                 </div>
                 
               </li>

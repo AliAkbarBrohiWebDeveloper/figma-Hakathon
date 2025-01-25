@@ -10,6 +10,6 @@ export const store = configureStore({
   },
 });
 
-// Define the RootState type so you can access it in useSelector
+
 export type RootState = ReturnType<typeof store.getState>;
 
