@@ -6,7 +6,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaMinus, FaPlus, FaTrashAlt } from "react-icons/fa";
 import { removeFromCart, updateQuantity, clearCart } from "@/app/Redux/cartslice";
-import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import { CartItem } from "../types/interface";  
@@ -128,11 +127,11 @@ const CartPage = () => {
                 Clear Cart
               </button>
 
-              <Link href={'/check'}>
+             
                 <button className="w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition duration-300 ease-in-out">
                   Proceed to Checkout
                 </button>
-              </Link>
+             
             </div>
           </div>
         )}

@@ -6,6 +6,6 @@ export const client = createClient({
   projectId:process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset:process.env.NEXT_PUBLIC_SANITY_DATASET,
   apiVersion,
-  useCdn: true,
+  useCdn: false,
   token:process.env.SANITY_API_TOKEN // Set to false if statically generating pages, using ISR or tag-based revalidation
 })
