@@ -726,24 +726,477 @@
 
 
 
+// "use client";
+// import { zodResolver } from "@hookform/resolvers/zod";
+// import { useForm } from "react-hook-form";
+// import { z } from "zod";
+
+// import Wrapper from '@/components/shareable/Wrapper';
+// import Image from 'next/image';
+// import { useSelector } from "react-redux";
+
+// import { CartItem } from '../types/interface';
+// import { RootState } from '../Redux/store';
+// import { Button } from "@/components/ui/button";
+// import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+// import { Input } from "@/components/ui/input";
+// import { client } from "@/sanity/lib/client";
+// import { useState } from 'react';
+
+// // Validation schema using Zod
+// const formSchema = z.object({
+//   firstName: z.string().min(1, { message: "First Name is required" }).max(50),
+//   lastName: z.string().min(1, { message: "Last Name is required" }).max(50),
+//   email: z.string().email({ message: "Invalid email address" }),
+// });
+
+// type FormType = z.infer<typeof formSchema>;
+
+// function CheckPage() {
+//   const cartItems = useSelector((state: RootState) => state.cart.items);
+
+//   const totalPrice = cartItems
+//     .reduce((total: number, item: CartItem) => total + item.price * item.quantity, 0)
+//     .toFixed(2);
+
+//   const form = useForm<FormType>({
+//     resolver: zodResolver(formSchema),
+//   });
+
+//   const [message, setMessage] = useState<string | null>(null);
+//   const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
+
+
+//   async function onSubmit(values: FormType) {
+//     try {
+     
+//       const customerDoc = await client.create({
+//         _type: 'customer',
+//         firstName: values.firstName,
+//         lastName: values.lastName,
+//         email: values.email,
+//       });
+
+//       console.log('Customer Document Created:', customerDoc);
+
+     
+//       const orderDoc = await client.create({
+//         _type: 'order',
+//         orderNumber: `ORD-${Date.now()}`, 
+//         customer: {
+//           _type: 'reference',
+//           _ref: customerDoc._id, 
+//         },
+//         orderItems: cartItems.map((item) => ({
+//           _type: 'reference',
+//           _ref: item.id,
+//         })),
+//         totalPrice: parseFloat(totalPrice), 
+//         orderStatus: 'Pending', 
+//       });
+
+//       console.log('Order Document Created:', orderDoc);
+
+     
+//       setMessage("Your order has been placed successfully!");
+//       setIsSuccess(true);
+//     } catch (error) {
+//       console.error("Error submitting form:", error);
+
+//       setMessage("Failed to save customer and order details in Sanity.");
+//       setIsSuccess(false);
+
+//       if (error instanceof Error) {
+//         console.error("Sanity Error:", error.message);
+//       }
+//     }
+//   }
+
+//   return (
+//     <Wrapper>
+//       <div>
+//         {message && (
+//           <div
+//             className={`p-4 mb-4 rounded-md text-center ${
+//               isSuccess ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+//             }`}
+//           >
+//             {message}
+//           </div>
+//         )}
+
+//         <Form {...form}>
+//           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+//             <FormField
+//               control={form.control}
+//               name="firstName"
+//               render={({ field }) => (
+//                 <FormItem>
+//                   <FormLabel>First Name</FormLabel>
+//                   <FormControl>
+//                     <Input placeholder="First Name" {...field} />
+//                   </FormControl>
+//                   <FormMessage />
+//                 </FormItem>
+//               )}
+//             />
+
+//             <FormField
+//               control={form.control}
+//               name="lastName"
+//               render={({ field }) => (
+//                 <FormItem>
+//                   <FormLabel>Last Name</FormLabel>
+//                   <FormControl>
+//                     <Input placeholder="Last Name" {...field} />
+//                   </FormControl>
+//                   <FormMessage />
+//                 </FormItem>
+//               )}
+//             />
+
+//             <FormField
+//               control={form.control}
+//               name="email"
+//               render={({ field }) => (
+//                 <FormItem>
+//                   <FormLabel>Email</FormLabel>
+//                   <FormControl>
+//                     <Input placeholder="Email" {...field} />
+//                   </FormControl>
+//                   <FormMessage />
+//                 </FormItem>
+//               )}
+//             />
+
+//             <Button type="submit">Save Customer Details</Button>
+//           </form>
+//         </Form>
+
+//         {/* Order summary */}
+//         <div className="flex-1 mt-12">
+//           <h4 className="font-bold text-xl">Order Summary</h4>
+//           <div className="mt-10">
+//             {cartItems.map((item: CartItem) => (
+//               <div key={item.id} className="flex items-center justify-between mt-6">
+//                 <div className="flex items-center gap-x-4">
+//                   <Image
+//                     src={item.image}
+//                     alt={item.name}
+//                     height={100}
+//                     width={100}
+//                     className="object-cover rounded-md"
+//                   />
+//                   <div>
+//                     <h3 className="font-semibold">{item.name}</h3>
+//                     <p>{item.quantity} x {item.price}</p>
+//                   </div>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+
+//           <div className="mt-6">
+//             <div className="flex justify-between">
+//               <span className="font-bold text-xl">Total Price:</span>
+//               <span className="font-bold">PKR: {totalPrice}</span>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </Wrapper>
+//   );
+// }
+
+// export default CheckPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import { zodResolver } from "@hookform/resolvers/zod";
+// import { useForm } from "react-hook-form";
+// import { z } from "zod";
+// import Wrapper from '@/components/shareable/Wrapper';
+// import Image from 'next/image';
+// import { useSelector } from "react-redux";
+// import { RootState } from '../Redux/store';
+// import { Button } from "@/components/ui/button";
+// import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+// import { Input } from "@/components/ui/input";
+// import { useState } from 'react';
+
+// import { CartItem } from '../types/interface';
+
+
+// const formSchema = z.object({
+//   firstName: z.string().min(1, { message: "First Name is required" }).max(50),
+//   lastName: z.string().min(1, { message: "Last Name is required" }).max(50),
+//   email: z.string().email({ message: "Invalid email address" }),
+// });
+
+// type FormType = z.infer<typeof formSchema>;
+
+// function CheckPage() {
+ 
+//   const cartItems = useSelector((state: RootState) => state.cart.items);
+
+ 
+//   const totalPrice = cartItems
+//     .reduce((total: number, item: CartItem) => total + item.price * item.quantity, 0)
+//     .toFixed(2);
+
+ 
+//   const form = useForm<FormType>({
+//     resolver: zodResolver(formSchema),
+//   });
+
+//   const [message, setMessage] = useState<string | null>(null);
+//   const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
+
+
+//   async function onSubmit(values: FormType) {
+//     try {
+//       const orderData = {
+//         firstName: values.firstName,
+//         lastName: values.lastName,
+//         email: values.email,
+//         cartItems,
+//         totalPrice,
+//       };
+
+      
+//       const response = await fetch('/api/createOrder', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(orderData),
+//       });
+
+    
+//       const data = await response.json();
+
+//       if (response.ok) {
+//         setMessage('Your order has been placed successfully!');
+//         setIsSuccess(true);
+//       } else {
+//         setMessage(data.error || 'Failed to place the order.');
+//         setIsSuccess(false);
+//       }
+//     } catch (error) {
+//       console.error("Error submitting form:", error);
+//       setMessage('Failed to place the order due to a network error.');
+//       setIsSuccess(false);
+//     }
+//   }
+
+//   return (
+//     <Wrapper>
+//       <div>
+      
+//         {message && (
+//           <div
+//             className={`p-4 mb-4 rounded-md text-center ${isSuccess ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+//           >
+//             {message}
+//           </div>
+//         )}
+
+//         {/* Form for customer details */}
+//         <Form {...form}>
+//           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+//             <FormField
+//               control={form.control}
+//               name="firstName"
+//               render={({ field }) => (
+//                 <FormItem>
+//                   <FormLabel>First Name</FormLabel>
+//                   <FormControl>
+//                     <Input placeholder="First Name" {...field} />
+//                   </FormControl>
+//                   <FormMessage />
+//                 </FormItem>
+//               )}
+//             />
+
+//             <FormField
+//               control={form.control}
+//               name="lastName"
+//               render={({ field }) => (
+//                 <FormItem>
+//                   <FormLabel>Last Name</FormLabel>
+//                   <FormControl>
+//                     <Input placeholder="Last Name" {...field} />
+//                   </FormControl>
+//                   <FormMessage />
+//                 </FormItem>
+//               )}
+//             />
+
+//             <FormField
+//               control={form.control}
+//               name="email"
+//               render={({ field }) => (
+//                 <FormItem>
+//                   <FormLabel>Email</FormLabel>
+//                   <FormControl>
+//                     <Input placeholder="Email" {...field} />
+//                   </FormControl>
+//                   <FormMessage />
+//                 </FormItem>
+//               )}
+//             />
+
+//             <Button type="submit">Save Customer Details</Button>
+//           </form>
+//         </Form>
+
+//         {/* Order summary */}
+//         <div className="flex-1 mt-12">
+//           <h4 className="font-bold text-xl">Order Summary</h4>
+//           <div className="mt-10">
+//             {cartItems.map((item: CartItem) => (
+//               <div key={item.id} className="flex items-center justify-between mt-6">
+//                 <div className="flex items-center gap-x-4">
+//                   <Image
+//                     src={item.image}
+//                     alt={item.name}
+//                     height={100}
+//                     width={100}
+//                     className="object-cover rounded-md"
+//                   />
+//                   <div>
+//                     <h3 className="font-semibold">{item.name}</h3>
+//                     <p>{item.quantity} x {item.price}</p>
+//                   </div>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+
+//           <div className="mt-6">
+//             <div className="flex justify-between">
+//               <span className="font-bold text-xl">Total Price:</span>
+//               <span className="font-bold">PKR: {totalPrice}</span>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </Wrapper>
+//   );
+// }
+
+// export default CheckPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 "use client";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
 import Wrapper from '@/components/shareable/Wrapper';
 import Image from 'next/image';
-import { useSelector } from "react-redux";
-
-import { CartItem } from '../types/interface';
+import { useSelector, useDispatch } from "react-redux";
 import { RootState } from '../Redux/store';
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { client } from "@/sanity/lib/client";
 import { useState } from 'react';
+import { clearCart } from '@/app/Redux/cartslice';
 
-// Validation schema using Zod
+
+import { CartItem } from '../types/interface';
+
+
 const formSchema = z.object({
   firstName: z.string().min(1, { message: "First Name is required" }).max(50),
   lastName: z.string().min(1, { message: "Last Name is required" }).max(50),
@@ -753,6 +1206,7 @@ const formSchema = z.object({
 type FormType = z.infer<typeof formSchema>;
 
 function CheckPage() {
+  const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
 
   const totalPrice = cartItems
@@ -766,49 +1220,40 @@ function CheckPage() {
   const [message, setMessage] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
 
-
   async function onSubmit(values: FormType) {
     try {
-     
-      const customerDoc = await client.create({
-        _type: 'customer',
+      const orderData = {
         firstName: values.firstName,
         lastName: values.lastName,
         email: values.email,
-      });
+        cartItems,
+        totalPrice,
+      };
 
-      console.log('Customer Document Created:', customerDoc);
-
-     
-      const orderDoc = await client.create({
-        _type: 'order',
-        orderNumber: `ORD-${Date.now()}`, 
-        customer: {
-          _type: 'reference',
-          _ref: customerDoc._id, 
+      const response = await fetch('/api/createOrder', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        orderItems: cartItems.map((item) => ({
-          _type: 'reference',
-          _ref: item.id,
-        })),
-        totalPrice: parseFloat(totalPrice), 
-        orderStatus: 'Pending', 
+        body: JSON.stringify(orderData),
       });
 
-      console.log('Order Document Created:', orderDoc);
+      const data = await response.json();
 
-     
-      setMessage("Your order has been placed successfully!");
-      setIsSuccess(true);
+      if (response.ok) {
+        setMessage('Your order has been placed successfully!');
+        setIsSuccess(true);
+
+       
+        dispatch(clearCart()); 
+      } else {
+        setMessage(data.error || 'Failed to place the order.');
+        setIsSuccess(false);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
-
-      setMessage("Failed to save customer and order details in Sanity.");
+      setMessage('Failed to place the order due to a network error.');
       setIsSuccess(false);
-
-      if (error instanceof Error) {
-        console.error("Sanity Error:", error.message);
-      }
     }
   }
 
@@ -817,14 +1262,13 @@ function CheckPage() {
       <div>
         {message && (
           <div
-            className={`p-4 mb-4 rounded-md text-center ${
-              isSuccess ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
-            }`}
+            className={`p-4 mb-4 rounded-md text-center ${isSuccess ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
           >
             {message}
           </div>
         )}
 
+      
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <FormField
@@ -869,11 +1313,11 @@ function CheckPage() {
               )}
             />
 
-            <Button type="submit">Save Customer Details</Button>
+            <Button type="submit">Place Order</Button>
           </form>
         </Form>
 
-        {/* Order summary */}
+      
         <div className="flex-1 mt-12">
           <h4 className="font-bold text-xl">Order Summary</h4>
           <div className="mt-10">
@@ -909,51 +1353,6 @@ function CheckPage() {
 }
 
 export default CheckPage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

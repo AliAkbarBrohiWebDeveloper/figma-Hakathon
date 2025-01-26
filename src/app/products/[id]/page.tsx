@@ -102,7 +102,8 @@ const ProductDetailPage = ({ params }: { params: { id: string } }) => {
   };
 
   if (!data) {
-    return <div>
+    return <div className="text-center font-bold text-xl">
+      loading...
       
       </div>;
   }
@@ -112,7 +113,7 @@ const ProductDetailPage = ({ params }: { params: { id: string } }) => {
   return (
     <section className="py-12 px-4">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-x-12">
-        {/* Product Image */}
+      
         <div className="flex-shrink-0 w-full md:w-1/2 flex justify-center">
           <Image
             src={urlFor(data.image).url()}

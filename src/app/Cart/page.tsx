@@ -10,6 +10,7 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import { CartItem } from "../types/interface";  
 import { RootState } from "../Redux/store";  
+import Link from "next/link";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -127,10 +128,11 @@ const CartPage = () => {
                 Clear Cart
               </button>
 
-             
+             <Link href={`/check`}>
                 <button className="w-full py-3 px-6 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 transition duration-300 ease-in-out">
                   Proceed to Checkout
                 </button>
+                </Link>
              
             </div>
           </div>
