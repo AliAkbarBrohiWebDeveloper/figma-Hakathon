@@ -1,15 +1,29 @@
 
-'use client'
-
+"use client"
 import { configureStore } from '@reduxjs/toolkit';
-import cartReducer from './cartslice';
+import { persistReducer, persistStore } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import cartReducer from '@/app/Redux/cartslice';
 
-export const store = configureStore({
+
+const persistConfig = {
+  key: 'cart',
+  storage, 
+};
+
+const persistedCartReducer = persistReducer(persistConfig, cartReducer);
+
+
+const store = configureStore({
   reducer: {
-    cart: cartReducer,
+    cart: persistedCartReducer,
   },
 });
 
 
+const persistor = persistStore(store);
+
+
 export type RootState = ReturnType<typeof store.getState>;
 
+export { store, persistor };

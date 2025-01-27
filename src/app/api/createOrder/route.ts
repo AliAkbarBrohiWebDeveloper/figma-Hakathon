@@ -15,6 +15,8 @@ interface RequestBody{
   firstName:string,
   lastName:string,
   email:string,
+  Address:string,
+  Phone:number,
   cartItems:CartItem[],
   totalPrice:string
 }
@@ -25,13 +27,15 @@ export async function   POST(req:NextRequest){
 
 try{
 
-  const {firstName,lastName,email,cartItems,totalPrice}:RequestBody=await req.json()
+  const {firstName,lastName,email,Address,Phone,cartItems,totalPrice}:RequestBody=await req.json()
 
   const customerDoc=await client.create({
     _type:"customer",
     firstName,
     lastName,
-    email
+    email,
+    Address,
+    Phone
 
 
   })

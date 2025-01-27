@@ -16,26 +16,8 @@ interface CartState {
   items: CartItem[];
 }
 
-
-const getLocalStorage = (key: string) => {
-  if (typeof window !== 'undefined') {
-    const storedValue = localStorage.getItem(key);
-    try {
-      const parsedValue = storedValue ? JSON.parse(storedValue) : [];
-      return Array.isArray(parsedValue) ? parsedValue : [];
-    } catch (error) {
-      console.log(error);
-      
-     
-      return [];
-    }
-  }
-  return [];
-};
-
-
 const initialState: CartState = {
-  items: getLocalStorage('cart') || [], 
+  items: [], 
 };
 
 const cartSlice = createSlice({
@@ -44,7 +26,6 @@ const cartSlice = createSlice({
   reducers: {
     setCart(state, action: PayloadAction<CartItem[]>) {
       state.items = action.payload;
-      saveCartToLocalStorage(state.items);
     },
 
     addToCart(state, action: PayloadAction<CartItem>) {
@@ -54,13 +35,10 @@ const cartSlice = createSlice({
       } else {
         state.items.push(action.payload);
       }
-
-      saveCartToLocalStorage(state.items);
     },
 
     removeFromCart(state, action: PayloadAction<string>) {
       state.items = state.items.filter(item => item.id !== action.payload);
-      saveCartToLocalStorage(state.items);
     },
 
     updateQuantity(state, action: PayloadAction<{ id: string; quantity: number }>) {
@@ -68,23 +46,19 @@ const cartSlice = createSlice({
       if (item) {
         item.quantity = action.payload.quantity;
       }
-
-      saveCartToLocalStorage(state.items);
     },
 
     clearCart(state) {
       state.items = [];
-      saveCartToLocalStorage(state.items);
     },
   },
 });
 
-
-const saveCartToLocalStorage = (cartItems: CartItem[]) => {
-  if (typeof window !== 'undefined') {
-    localStorage.setItem('cart', JSON.stringify(cartItems));
-  }
-};
-
 export const { addToCart, removeFromCart, updateQuantity, clearCart, setCart } = cartSlice.actions;
 export default cartSlice.reducer;
+
+
+
+
+
+
