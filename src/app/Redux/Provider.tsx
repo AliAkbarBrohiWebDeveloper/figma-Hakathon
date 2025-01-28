@@ -1,6 +1,4 @@
 
-
-
 "use client"
 import { Provider } from 'react-redux';
 import { store, persistor } from '@/app/Redux/store'; 
@@ -17,3 +15,4 @@ const ReduxProvider = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default ReduxProvider;
+
