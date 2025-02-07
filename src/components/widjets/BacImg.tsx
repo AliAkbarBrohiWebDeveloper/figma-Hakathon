@@ -10,7 +10,7 @@ function BacImg() {
     <Wrapper>
       <section>
 
-        <div className="text-center bg-gray-200 py-5">
+        <div className="text-center bg-gray-200 py-5 mt-20">
           <h2 className="font-bold text-2xl">Hello Nike App</h2>
           <p className="text-sm">Download the app to access everything Nike. Get Your Great</p>
         </div>

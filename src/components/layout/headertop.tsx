@@ -22,7 +22,7 @@ import Navbar from './Navbar'
 const Headertop = () => (
   <section className="sticky top-0 z-10 bg-[#F5F5F5]">
     <Wrapper>
-      <header className="flex justify-between items-center p-4 md:p-3 mt-1">
+      <header className="flex justify-between items-center p-4 md:p-3 mt-0">
      
         <div className="flex items-center">
           <Image src="/c1.png" alt="Logo" height={50} width={50} />
