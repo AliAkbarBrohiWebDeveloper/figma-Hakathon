@@ -4,11 +4,9 @@ import { productSchema } from './product'
 
 import { CustomerShema } from './custmer'
 import { OrderSchema } from './order'
-
-
-
+import ReviewSection from './Review'
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [productSchema,CustomerShema,OrderSchema],
+  types: [productSchema,CustomerShema,OrderSchema,ReviewSection],
 }

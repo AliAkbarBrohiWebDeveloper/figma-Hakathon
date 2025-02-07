@@ -1,3 +1,4 @@
+
 export const OrderSchema= {
   name: 'order',
   title: 'Order',
@@ -13,4 +14,6 @@ export const OrderSchema= {
     { name: 'totalPrice', type: 'number' },
     { name: 'orderStatus', type: 'string' },
   ],
-};
+}
+
+

@@ -9,6 +9,11 @@ import Navbar from './Navbar';
 import { client } from '@/sanity/lib/client';
 import { IProduct } from '@/app/types/interface';
 
+
+
+
+
+
 const Headermain = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -78,6 +83,7 @@ const Headermain = () => {
             <li><Link href={''}>Kids</Link></li>
             <li><Link href={''}>Sales</Link></li>
             <li><Link href={''}>SNKRS</Link></li>
+           
           </ul>
         </div>
 

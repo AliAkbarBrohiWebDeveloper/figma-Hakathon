@@ -6,6 +6,9 @@ import Wrapper from '../shareable/Wrapper'
 import Image from 'next/image'
 import { Menu } from 'lucide-react'
 
+
+
+
 import {
   Sheet,
   SheetContent,
@@ -31,7 +34,8 @@ const Headertop = () => (
           <Link href="/products">Find a Store</Link>
           <Link href="/help">Help</Link>
           <Link href="/join">Join Us</Link>
-          <Link href="/sign">Sign In</Link>
+          {/* <Link href="/sign">Sign In</Link> */}
+       
         </div>
 
        

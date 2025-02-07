@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,13 +15,14 @@ import { Input } from "@/components/ui/input";
 import { useState } from 'react';
 import { clearCart } from '@/app/Redux/cartslice';
 import { CartItem } from '../types/interface';
+import { useRouter } from 'next/navigation'; // Import useRouter from Next.js
 
 const formSchema = z.object({
   firstName: z.string().min(1, { message: "First Name is required" }).max(50),
   lastName: z.string().min(1, { message: "Last Name is required" }).max(50),
   email: z.string().email({ message: "Invalid email address" }),
-  Address: z.string().min(12, { message: "Shipping Address is required" }),
-  Phone: z.string().min(11, { message: "Phone Number is required" })
+  Address: z.string().min(5, { message: "Shipping Address is required" }),
+  Phone: z.string().max(11, { message: "Phone Number is required" })
 });
 
 type FormType = z.infer<typeof formSchema>;
@@ -28,10 +30,12 @@ type FormType = z.infer<typeof formSchema>;
 function CheckPage() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state: RootState) => state.cart.items);
+  const router = useRouter(); // Initialize router for redirect
 
-  const totalPrice = cartItems
-    .reduce((total: number, item: CartItem) => total + item.price * item.quantity, 0)
-    .toFixed(2);
+  const totalPrice = cartItems.reduce(
+    (total: number, item: CartItem) => total + item.price * item.quantity,
+    0
+  ).toFixed(2);
 
   const form = useForm<FormType>({
     resolver: zodResolver(formSchema),
@@ -66,6 +70,9 @@ function CheckPage() {
         setMessage('Your order has been placed successfully!');
         setIsSuccess(true);
         dispatch(clearCart());
+
+        // Redirect to the payment page after successful order placement
+        router.push('/payment'); // Use Next.js router for redirect
       } else {
         setMessage(data.error || 'Failed to place the order.');
         setIsSuccess(false);
@@ -79,8 +86,8 @@ function CheckPage() {
 
   return (
     <Wrapper>
-      <section className="flex flex-col md:flex-row gap-10 md:gap-14 py-10">
-        {/* Order Summary (Left Side) */}
+      <section className="flex flex-col-reverse md:flex-row gap-10 md:gap-14 py-10">
+        {/* Order Summary Section */}
         <div className="w-full md:w-1/2 p-4 bg-white shadow-md rounded-lg">
           <h4 className="font-bold text-xl mb-6">Order Summary</h4>
           <div>
@@ -102,7 +109,6 @@ function CheckPage() {
               </div>
             ))}
           </div>
-
           <div className="mt-6">
             <div className="flex justify-between">
               <span className="font-bold text-xl">Total Price:</span>
@@ -111,7 +117,7 @@ function CheckPage() {
           </div>
         </div>
 
-        {/* Customer Details (Right Side) */}
+        {/* Shipping Details Form Section */}
         <div className="w-full md:w-1/2 p-4 bg-white shadow-md rounded-lg">
           {message && (
             <div
@@ -132,7 +138,11 @@ function CheckPage() {
                   <FormItem>
                     <FormLabel className="text-xl font-bold">First Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="First Name" {...field} />
+                      <Input
+                        placeholder="First Name"
+                        {...field}
+                        value={field.value || ""}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -146,7 +156,11 @@ function CheckPage() {
                   <FormItem>
                     <FormLabel className="text-xl font-bold">Last Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Last Name" {...field} />
+                      <Input
+                        placeholder="Last Name"
+                        {...field}
+                        value={field.value || ""}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -160,7 +174,11 @@ function CheckPage() {
                   <FormItem>
                     <FormLabel className="text-xl font-bold">Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="Email" {...field} />
+                      <Input
+                        placeholder="Email"
+                        {...field}
+                        value={field.value || ""}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -174,7 +192,11 @@ function CheckPage() {
                   <FormItem>
                     <FormLabel className="text-xl font-bold">Address</FormLabel>
                     <FormControl>
-                      <Input placeholder="Address" {...field} />
+                      <Input
+                        placeholder="Address"
+                        {...field}
+                        value={field.value || ""}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -188,14 +210,22 @@ function CheckPage() {
                   <FormItem>
                     <FormLabel className="text-xl font-bold">Phone Number</FormLabel>
                     <FormControl>
-                      <Input placeholder="Phone Number" {...field} />
+                      <Input
+                        placeholder="Phone Number"
+                        {...field}
+                        value={field.value || ""}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              <Button type="submit" className="text-white bg-blue-500 rounded-sm w-full h-12 hover:bg-red-500">
+              {/* Place Order Button */}
+              <Button
+                type="submit"
+                className="text-white bg-blue-500 rounded-sm w-full h-12 hover:bg-red-500"
+              >
                 Place Order
               </Button>
             </form>
